@@ -1,11 +1,10 @@
 import { PreviewSuspense } from '@sanity/preview-kit'
-import IndexPage from 'components/IndexPage'
 import { getAllPosts, getSettings } from 'lib/sanity.client'
 import { Post, Settings } from 'lib/sanity.queries'
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
 import { lazy } from 'react'
-
-const PreviewIndexPage = lazy(() => import('components/PreviewIndexPage'))
 
 interface PageProps {
   posts: Post[]
@@ -25,19 +24,19 @@ interface PreviewData {
 export default function Page(props: PageProps) {
   const { posts, settings, preview, token } = props
 
-  if (preview) {
-    return (
-      <PreviewSuspense
-        fallback={
-          <IndexPage loading preview posts={posts} settings={settings} />
-        }
-      >
-        <PreviewIndexPage token={token} />
-      </PreviewSuspense>
-    )
-  }
-
-  return <IndexPage posts={posts} settings={settings} />
+  return (
+    <>
+      <Head>
+        <title>She Workshop</title>
+        <meta name="description" content="She Workshop" />
+      </Head>
+      <main>
+        <section className="flex min-h-screen items-center justify-center bg-black p-4 text-white">
+          <h1>SHE WORKSHOP</h1>
+        </section>
+      </main>
+    </>
+  )
 }
 
 export const getStaticProps: GetStaticProps<

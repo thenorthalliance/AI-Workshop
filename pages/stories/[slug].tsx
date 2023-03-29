@@ -1,22 +1,19 @@
 import { PreviewSuspense } from '@sanity/preview-kit'
-import PostPage from 'components/PostPage'
 import {
+  getAllFairytaleSlugs,
   getAllPostsSlugs,
   getPostAndMoreStories,
   getSettings,
 } from 'lib/sanity.client'
 import { Post, Settings } from 'lib/sanity.queries'
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import { lazy } from 'react'
-
-const PreviewPostPage = lazy(() => import('components/PreviewPostPage'))
 
 interface PageProps {
   post: Post
   morePosts: Post[]
   settings?: Settings
-  preview: boolean
-  token: string | null
 }
 
 interface Query {
@@ -28,32 +25,18 @@ interface PreviewData {
 }
 
 export default function ProjectSlugRoute(props: PageProps) {
-  const { settings, post, morePosts, preview, token } = props
+  const { settings, post, morePosts } = props
 
-  if (preview) {
-    return (
-      <PreviewSuspense
-        fallback={
-          <PostPage
-            loading
-            preview
-            post={post}
-            morePosts={morePosts}
-            settings={settings}
-          />
-        }
-      >
-        <PreviewPostPage
-          token={token}
-          post={post}
-          morePosts={morePosts}
-          settings={settings}
-        />
-      </PreviewSuspense>
-    )
-  }
-
-  return <PostPage post={post} morePosts={morePosts} settings={settings} />
+  return (
+    <>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
+      <main>
+        <div>ete</div>
+      </main>
+    </>
+  )
 }
 
 export const getStaticProps: GetStaticProps<
@@ -61,13 +44,11 @@ export const getStaticProps: GetStaticProps<
   Query,
   PreviewData
 > = async (ctx) => {
-  const { preview = false, previewData = {}, params = {} } = ctx
-
-  const token = previewData.token
+  const { params = {} } = ctx
 
   const [settings, { post, morePosts }] = await Promise.all([
     getSettings(),
-    getPostAndMoreStories(params.slug, token),
+    getPostAndMoreStories(params.slug),
   ])
 
   if (!post) {
@@ -81,14 +62,12 @@ export const getStaticProps: GetStaticProps<
       post,
       morePosts,
       settings,
-      preview,
-      token: previewData.token ?? null,
     },
   }
 }
 
 export const getStaticPaths = async () => {
-  const slugs = await getAllPostsSlugs()
+  const slugs = await getAllFairytaleSlugs()
 
   return {
     paths: slugs?.map(({ slug }) => `/posts/${slug}`) || [],

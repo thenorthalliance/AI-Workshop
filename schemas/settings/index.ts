@@ -2,8 +2,6 @@ import { CogIcon } from '@sanity/icons'
 import * as demo from 'lib/demo.data'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
-import OpenGraphInput from './OpenGraphInput'
-
 export default defineType({
   name: 'settings',
   title: 'Settings',
@@ -55,23 +53,23 @@ export default defineType({
       ],
       validation: (rule) => rule.max(155).required(),
     }),
-    defineField({
-      name: 'ogImage',
-      title: 'Open Graph Image',
-      description:
-        'Used for social media previews when linking to the index page.',
-      type: 'object',
-      components: {
-        input: OpenGraphInput as any,
-      },
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Title',
-          type: 'string',
-          initialValue: demo.ogImageTitle,
-        }),
-      ],
-    }),
+    // defineField({
+    //   name: 'ogImage',
+    //   title: 'Open Graph Image',
+    //   description:
+    //     'Used for social media previews when linking to the index page.',
+    //   type: 'object',
+    //   components: {
+    //     input: OpenGraphInput as any,
+    //   },
+    //   fields: [
+    //     defineField({
+    //       name: 'title',
+    //       title: 'Title',
+    //       type: 'string',
+    //       initialValue: demo.ogImageTitle,
+    //     }),
+    //   ],
+    // }),
   ],
 })

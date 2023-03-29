@@ -2,15 +2,13 @@
 module.exports = {
   content: [
     './components/**/*.{js,ts,jsx,tsx}',
-    './intro-template/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
-    './plugins/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
+        primary: '#FAFAFA',
+        secondary: '#EAEAEA',
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',

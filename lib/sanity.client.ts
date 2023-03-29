@@ -62,3 +62,11 @@ export async function getPostAndMoreStories(
   }
   return { post: null, morePosts: [] }
 }
+
+export async function getAllFairytaleSlugs(): Promise<Pick<Post, 'slug'>[]> {
+  if (client) {
+    const slugs = (await client.fetch<string[]>(postSlugsQuery)) || []
+    return slugs.map((slug) => ({ slug }))
+  }
+  return []
+}
