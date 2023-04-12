@@ -90,6 +90,7 @@ const FairtalePage = ({ fairytale }: PageProps) => {
           <p>{fairytale.story}</p>
         </div>
         <div className="col-span-3">
+          {/* Add Loaders here */}
           <h2>{title}</h2>
           <p>{story}</p>
         </div>
