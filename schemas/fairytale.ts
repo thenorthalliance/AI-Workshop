@@ -1,4 +1,5 @@
 import { BookIcon } from '@sanity/icons'
+import CustomInput from 'components/atoms/CustomInput'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
 
@@ -61,6 +62,15 @@ export default defineType({
       description: 'This is the image that will be shown on the post page',
       options: {
         hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'generateText',
+      title: 'Generate Text',
+      type: 'text',
+      rows: 3,
+      components: {
+        input: CustomInput,
       },
     }),
   ],
