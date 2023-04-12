@@ -95,7 +95,7 @@ const FairtalePage = ({ fairytale }: PageProps) => {
             className="object-cover"
           />
         </div>
-        <h1 className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text py-10 text-center text-8xl font-extrabold text-transparent">
+        <h1 className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text py-10  text-center xl:text-7xl lg:text-6xl sm:text-4xl md:text-5xl font-extrabold text-transparent">
           {fairytale.title}
         </h1>
 
@@ -126,10 +126,10 @@ const FairtalePage = ({ fairytale }: PageProps) => {
               <div>
                 {story ? (
                   <div className="flex flex-col items-center gap-4">
-                    <p>{story}</p>
                     {storyImage && (
                       <Image src={storyImage} alt="" width={256} height={256} />
                     )}
+                    <p>{story}</p>
                   </div>
                 ) : (
                   <p>Click the button above to generate a new story</p>

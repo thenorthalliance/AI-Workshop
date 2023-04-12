@@ -44,7 +44,9 @@ const StoriesPage = ({ fairytales }: PageProps) => {
     <>
       <main className="min-h-screen p-4">
         <section className="">
-          <h1 className="text-center">Eventyr</h1>
+          <h1 className="bg-gradient-to-r from-pink-300 to-purple-600 bg-clip-text py-10  text-center xl:text-8xl lg:text-8xl sm:text-7xl md:text-7xl font-extrabold text-transparent">
+            Eventyr
+          </h1>
 
           {/* <form onSubmit={handleSubmission} className="flex flex-col gap-4">
             <div className="flex flex-col">
@@ -70,7 +72,7 @@ const StoriesPage = ({ fairytales }: PageProps) => {
             <p>{answer}</p>
           </div> */}
 
-          <ul className="grid grid-cols-4 gap-4 pt-4 mx-12">
+          <ul className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4 mx-12">
             {fairytales.map((fairytale) => (
               <li key={fairytale._id} className="relative bg-white text-black">
                 <div className="relative aspect-1 ">
@@ -85,14 +87,14 @@ const StoriesPage = ({ fairytales }: PageProps) => {
                   />
                 </div>
                 <div className="p-4">
-                  <p>{fairytale.excerpt}</p>
                   {/* <PortableText value={fairytale.content} /> */}
                   <Link
                     href={`/fairytale/${fairytale.slug}`}
-                    className="underline"
+                    className="hover:underline"
                   >
-                    {fairytale.title}
+                    <h3> {fairytale.title}</h3>
                   </Link>
+                  <p>{fairytale.excerpt}</p>
                 </div>
               </li>
             ))}
