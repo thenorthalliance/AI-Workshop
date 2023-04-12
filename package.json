@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "@portabletext/react": "2.0.2",
+    "@sanity/icons": "^2.2.2",
     "@sanity/image-url": "1.0.2",
     "@sanity/vision": "3.7.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@vercel/og": "0.4.1",
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",
