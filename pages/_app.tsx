@@ -1,7 +1,6 @@
-// import 'tailwindcss/tailwind.css'
-import { NavigationBar } from 'components'
 import '../styles/globals.css'
 
+import NavigationBar from 'components/molecules/NavigationBar'
 import { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {

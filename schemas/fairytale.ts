@@ -2,8 +2,6 @@ import { BookIcon } from '@sanity/icons'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
 
-import authorType from './author'
-
 /**
  * This file is the schema definition for a post.
  *
@@ -26,12 +24,15 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      description: 'The title of the post',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      description:
+        'Some frontends will require a slug to be set to be able to show the post',
       options: {
         source: 'title',
         maxLength: 96,
@@ -40,51 +41,37 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'content',
-      title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }],
-    }),
-    defineField({
       name: 'excerpt',
       title: 'Excerpt',
+      description:
+        'Short description to use on the homepage, max 200 characters',
       type: 'text',
+    }),
+    defineField({
+      name: 'story',
+      title: 'Story',
+      type: 'text',
+      description: 'The story of the fairytale',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'coverImage',
       title: 'Cover Image',
       type: 'image',
+      description: 'This is the image that will be shown on the post page',
       options: {
         hotspot: true,
       },
-    }),
-    defineField({
-      name: 'date',
-      title: 'Date',
-      type: 'datetime',
-      initialValue: () => new Date().toISOString(),
-    }),
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: [{ type: authorType.name }],
     }),
   ],
   preview: {
     select: {
       title: 'title',
       author: 'author.name',
-      date: 'date',
       media: 'coverImage',
     },
-    prepare({ title, media, author, date }) {
-      const subtitles = [
-        author && `by ${author}`,
-        date && `on ${format(parseISO(date), 'LLL d, yyyy')}`,
-      ].filter(Boolean)
-
-      return { title, media, subtitle: subtitles.join(' ') }
+    prepare({ title, media }) {
+      return { title, media, subtitle: 'Fairytale' }
     },
   },
 })
