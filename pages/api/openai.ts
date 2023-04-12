@@ -33,8 +33,8 @@ export default async function handler(
       {
         model: 'text-davinci-003',
         prompt: promt,
-        max_tokens: 100, // max number of tokens to generate
-        temperature: 0.9, // higher temperature means more creative, less coherent
+        max_tokens: 500, // max number of tokens to generate
+        temperature: 1, // higher temperature means more creative, less coherent
         frequency_penalty: 0.5, // penalize new tokens based on their existing frequency, between -2.0 and 2.0
         presence_penalty: 0.0, // penalize new tokens based on whether they appear in the text so far,between -2.0 and 2.0
       },

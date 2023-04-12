@@ -10,11 +10,25 @@ const postFields = groq`
   "author": author->{name, picture},
 `
 
+const fairytaleFields = groq`
+  _id,
+  title,
+  excerpt,
+  content,
+  "slug": slug.current,
+  coverImage,
+`
+
 export const settingsQuery = groq`*[_type == "settings"][0]`
 
 export const indexQuery = groq`
 *[_type == "post"] | order(date desc, _updatedAt desc) {
   ${postFields}
+}`
+
+export const allFairyTalesQuery = groq`
+*[_type == "fairytale"]{
+  ${fairytaleFields}
 }`
 
 export const postAndMoreStoriesQuery = groq`
@@ -33,8 +47,18 @@ export const postSlugsQuery = groq`
 *[_type == "post" && defined(slug.current)][].slug.current
 `
 
+export const fairytaleSlugsQuery = groq`
+*[_type == "fairyTale" && defined(slug.current)][].slug.current
+`
+
 export const postBySlugQuery = groq`
 *[_type == "post" && slug.current == $slug][0] {
+  ${postFields}
+}
+`
+
+export const fairyTalesBySlugQuery = groq`
+*[_type == "fairyTale" && slug.current == $slug][0] {
   ${postFields}
 }
 `
@@ -61,4 +85,14 @@ export interface Settings {
   ogImage?: {
     title?: string
   }
+}
+
+export interface iFairytale {
+  _id: string
+  title?: string
+  coverImage?: any
+  excerpt?: string
+  slug?: string
+  content?: any
+  story?: string
 }

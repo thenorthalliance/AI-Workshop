@@ -4,8 +4,8 @@ import { useRouter } from 'next/router'
 
 const linkElements = [
   {
-    href: '/stories',
-    text: 'Stories',
+    href: '/fairytale',
+    text: 'Fairytales',
   },
   {
     href: '/links',
