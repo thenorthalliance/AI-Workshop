@@ -8,6 +8,7 @@ type ResponseData = {
 interface GenerateNextApiRequest extends NextApiRequest {
   body: {
     prompt: string
+    maxTokens?: number
   }
 }
 
@@ -22,6 +23,7 @@ export default async function handler(
   res: NextApiResponse<ResponseData>
 ) {
   const promt = req.body.prompt
+  const maxTokens = req.body.maxTokens || 100
 
   if (!promt || promt === '') {
     res.status(400).json({ text: 'No prompt provided' })
@@ -33,7 +35,7 @@ export default async function handler(
       {
         model: 'text-davinci-003',
         prompt: promt,
-        max_tokens: 500, // max number of tokens to generate
+        max_tokens: maxTokens, // max number of tokens to generate
         temperature: 1, // higher temperature means more creative, less coherent
         frequency_penalty: 0.5, // penalize new tokens based on their existing frequency, between -2.0 and 2.0
         presence_penalty: 0.0, // penalize new tokens based on whether they appear in the text so far,between -2.0 and 2.0

@@ -4,7 +4,9 @@ const config = {
     remotePatterns: [
       { hostname: 'cdn.sanity.io' },
       { hostname: 'source.unsplash.com' },
+      { hostname: 'oaidalleapiprodscus.blob.core.windows.net' },
     ],
+    // domains: ['oaidalleapiprodscus.blob.core.windows.net'],
   },
   typescript: {
     // Set this to false if you want production builds to abort if there's type errors
