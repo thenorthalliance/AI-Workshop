@@ -44,7 +44,7 @@ const StoriesPage = ({ fairytales }: PageProps) => {
     <>
       <main className="min-h-screen p-4">
         <section className="">
-          <h1>Eventyr</h1>
+          <h1 className="text-center">Eventyr</h1>
 
           {/* <form onSubmit={handleSubmission} className="flex flex-col gap-4">
             <div className="flex flex-col">
@@ -69,10 +69,11 @@ const StoriesPage = ({ fairytales }: PageProps) => {
             <h2>AI&#39;s response</h2>
             <p>{answer}</p>
           </div> */}
-          <ul className="grid grid-cols-6 gap-4 pt-4">
+
+          <ul className="grid grid-cols-4 gap-4 pt-4 mx-12">
             {fairytales.map((fairytale) => (
               <li key={fairytale._id} className="relative bg-white text-black">
-                <div className="relative aspect-square">
+                <div className="relative aspect-1 ">
                   <Image
                     src={urlForImage(fairytale.coverImage)
                       .height(400)
