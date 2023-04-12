@@ -18,6 +18,7 @@ const FairtalePage = ({ fairytale }: PageProps) => {
   const [story, setStory] = useState()
 
   const generateNewStory = async () => {
+    const newStoryPromt = `Generate a story based on the following story in Norwegian, and replace the male characters with women: ${fairytale.story}`
     try {
       const response = await fetch('/api/openai', {
         method: 'POST',
@@ -103,6 +104,8 @@ export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
   return {
     props: {
       fairytale,
+      // revalidate every two hours
+      revalidate: 60 * 60 * 2,
     },
   }
 }
