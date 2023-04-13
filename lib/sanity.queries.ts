@@ -8,6 +8,7 @@ const fairytaleFields = groq`
   content,
   "slug": slug.current,
   coverImage,
+  generateText,
 `
 
 export const allFairyTalesQuery = groq`
@@ -37,4 +38,5 @@ export interface iFairytale {
   slug?: string
   content?: any
   story?: string
+  generateText: string
 }
