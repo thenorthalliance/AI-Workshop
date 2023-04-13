@@ -1,4 +1,5 @@
 import { BookIcon } from '@sanity/icons'
+import OpenAISanity from 'components/atoms/OpenAISanity/OpenAISanity'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
 
@@ -61,6 +62,15 @@ export default defineType({
       description: 'This is the image that will be shown on the post page',
       options: {
         hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'test',
+      title: 'Test',
+      type: 'string',
+      description: 'this is a test',
+      components: {
+        input: OpenAISanity,
       },
     }),
   ],
