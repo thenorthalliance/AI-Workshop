@@ -19,7 +19,6 @@ export const fairytaleSlugsQuery = groq`
 *[_type == "fairyTale" && defined(slug.current)][].slug.current
 `
 
-
 export interface Post {
   _id: string
   title?: string

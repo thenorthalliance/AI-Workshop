@@ -5,10 +5,10 @@ import { iFairytale } from 'lib/sanity.queries'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-
+import { useState } from 'react'
 import { GiSwordwoman } from 'react-icons/gi'
 import { RiLoader2Line } from 'react-icons/ri'
+
 interface PageProps {
   fairytale: iFairytale
 }
@@ -20,7 +20,6 @@ interface Query {
 const FairtalePage = ({ fairytale }: PageProps) => {
   const [story, setStory] = useState()
   const [storyImage, setStoryImage] = useState('')
-
   const [isLoading, setIsLoading] = useState(false)
 
   const generateNewStory = async () => {
