@@ -8,7 +8,7 @@ INTRO TEXT HERE?
 1. One initial person on the team fork the repo to his/hers github.
 2. The initial person adds your team members as contributors/admin to the repo
 3. The rest of the team clones the repo from the initial persons github.
-4. Create a .env file in root folder. Example further down. 2
+4. Create a .env file in root folder. Example further down.
 5. Another group member will create a Sanity project within the root folder, once that is done you will need to locate the projectId. Copy paste that and put it inside the .env file. Send this projectId to each group member.
 6. Make sure the person who created the Sanity project invite each member as admin. (The invite will arrive on your email)
 8. Add  `localhost:3000/` as  [CORS]https://www.sanity.io/docs/cors)
