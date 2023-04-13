@@ -3,26 +3,43 @@ import React from 'react'
 
 const Links = () => {
   return (
-    <main>
-      <ul className="grid grid-cols-4">
-        <li className="bg-slate-200 aspect-1 text-center justify-center m-4">
-          <Link
-            className="align-middle"
-            href="https://www.sanity.io/docs/create-a-sanity-project"
-          >
-            Create a Sanity project
-          </Link>
-        </li>
-        <li className="bg-slate-200 aspect-1 text-center justify-center m-4">
-          <Link href="https://www.sanity.io/guides/your-first-input-component-for-sanity-studio-v3">
-            Sanity studio custom component
-          </Link>
-        </li>
-        <li className="bg-slate-200 aspect-1 text-center justify-center m-4">
-          <Link href="https://platform.openai.com/docs/api-reference/making-requests">
-            OpenAI - requests
-          </Link>
-        </li>
+    <main className="w-full mt-10">
+      <ul className="flex flex-col gap-20 ">
+        <Link
+          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          href="https://www.sanity.io/docs/create-a-sanity-project"
+        >
+          <li className="">
+            <p>Create a Sanity project</p>
+          </li>
+        </Link>
+
+        <Link
+          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          href="https://www.sanity.io/guides/your-first-input-component-for-sanity-studio-v3"
+        >
+          <li> Sanity studio custom component</li>
+        </Link>
+
+        <Link
+          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          href="https://platform.openai.com/docs/api-reference/making-requests"
+        >
+          <li>OpenAI - requests</li>
+        </Link>
+
+        <Link
+          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          href="https://tailwindcss.com/"
+        >
+          <li> TailwindCSS</li>
+        </Link>
+        <Link
+          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          href="https://platform.openai.com/docs/guides/images"
+        >
+          <li>OpenAI - Images</li>
+        </Link>
       </ul>
     </main>
   )

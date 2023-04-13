@@ -17,34 +17,11 @@ const StoriesPage = ({ fairytales }: PageProps) => {
           <h1 className="bg-gradient-to-r from-pink-300 to-purple-600 bg-clip-text py-10  text-center xl:text-8xl lg:text-8xl sm:text-7xl md:text-7xl font-extrabold text-transparent">
             Eventyr
           </h1>
+          {/* Example how to Link to slug page:
+          <Link href={`/fairytale/${fairytale.slug}`}></Link>
+          */}
 
-          <ul className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4 mx-12">
-            {fairytales.map((fairytale) => (
-              <li key={fairytale._id} className="relative bg-white text-black">
-                <div className="relative aspect-1 ">
-                  <Image
-                    src={urlForImage(fairytale.coverImage)
-                      .height(400)
-                      .width(400)
-                      .fit('crop')
-                      .url()}
-                    fill
-                    alt=""
-                  />
-                </div>
-                <div className="p-4">
-                  <Link
-                    href={`/fairytale/${fairytale.slug}`}
-                    className="hover:underline"
-                  >
-                    <h3> {fairytale.title}</h3>
-                  </Link>
-
-                  {/* <p>{fairytale.excerpt}</p> */}
-                </div>
-              </li>
-            ))}
-          </ul>
+          <ul className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4 mx-12"></ul>
         </section>
       </main>
     </>
