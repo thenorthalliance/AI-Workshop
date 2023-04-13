@@ -8,7 +8,6 @@ import { settingsPlugin, settingsStructure } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
-
 import fairytaleType from 'schemas/fairytale'
 import settingsType from 'schemas/settings'
 

@@ -41,13 +41,13 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: 'excerpt',
-      title: 'Excerpt',
-      description:
-        'Short description to use on the homepage, max 200 characters',
-      type: 'text',
-    }),
+    // defineField({
+    //   name: 'excerpt',
+    //   title: 'Excerpt',
+    //   description:
+    //     'Short description to use on the homepage, max 200 characters',
+    //   type: 'text',
+    // }),
     defineField({
       name: 'story',
       title: 'Story',
@@ -65,10 +65,10 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'test',
-      title: 'Test',
+      name: 'generateText',
+      title: 'OpenAI text generator',
       type: 'string',
-      description: 'this is a test',
+      description: ' Tell it to write something cool..',
       components: {
         input: OpenAISanity,
       },
