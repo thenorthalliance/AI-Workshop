@@ -19,7 +19,7 @@ INTRO TEXT HERE?
 
 ## The Challenge
 
-1.  First task will be to add some content to the studio. Copy paste a few fairytales from `fairytales/` folder. 
+1.  First task will be to add some content to the studio. Copy a few fairytales from `fairytales/` folder. Click on "Fairytale" in the studio and compose documents by pasting the fairytales in "Story". Add title and slug and publish the documents.
 
 2. Second task will be to create a custom React component within the studio. The component should have a text field and a button to generate text from OpenAI api. Check out [https://platform.openai.com/docs/api-reference/introduction](https://platform.openai.com/docs/api-reference/introduction).
 
