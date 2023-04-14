@@ -9,9 +9,9 @@ INTRO TEXT HERE?
 2. The initial person adds your team members as contributors/admin to the repo
 3. The rest of the team clones the repo from the initial persons github.
 4. Create a .env file in root folder. You will recieve the .env template on dropbox
-5. Another group member will create a Sanity project within the root folder, once that is done you will need to locate the projectId. Copy paste that and put it inside the .env file. Send this projectId to each group member.
+5. Another group member will [create a sanity project](https://www.sanity.io/docs/create-a-sanity-project) <ins>**outside**</ins> the root folder, once that is done you will need to locate the projectId inside the new folder and in `sanity.cli.ts`. Copy paste that and put it inside the .env file. Send this projectId to each group member.
 6. Make sure the person who created the Sanity project invite each member as admin. (The invite will arrive on your email)
-8. Add  `localhost:3000/` as  [CORS](https://www.sanity.io/docs/cors)
+8. Add  `localhost:3000/` as  [CORS](https://www.sanity.io/docs/cors#5a355ee47b66)
 9. Open terminal inside the root folder and run `npm install`
 10. Once the install is complete, run `npm run dev`
 13.  Open up your browser and go to  [http://localhost:3000/studio/desk](http://localhost:3000/studio)
