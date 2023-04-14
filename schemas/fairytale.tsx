@@ -1,4 +1,5 @@
 import { BookIcon } from '@sanity/icons'
+import OpenAISanity from 'components/OpenAISanity/OpenAISanity'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
 
@@ -56,7 +57,15 @@ export default defineType({
         hotspot: true,
       },
     }),
-    // Add a new field here.
+    defineField({
+      name: 'generateText',
+      title: 'OpenAI text generator',
+      type: 'string',
+      description: ' Tell it to write something cool..',
+      components: {
+        input: OpenAISanity,
+      },
+    }),
   ],
   preview: {
     select: {

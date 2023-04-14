@@ -17,6 +17,7 @@ const StoriesPage = ({ fairytales }: PageProps) => {
           <h1 className="bg-gradient-to-r from-pink-300 to-purple-600 bg-clip-text py-10  text-center xl:text-8xl lg:text-8xl sm:text-7xl md:text-7xl font-extrabold text-transparent">
             Eventyr
           </h1>
+
           {/* Example how to Link to slug page:
           <Link href={`/fairytale/${fairytale.slug}`}></Link>
           */}
