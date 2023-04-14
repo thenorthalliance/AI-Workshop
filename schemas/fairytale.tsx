@@ -1,5 +1,4 @@
 import { BookIcon } from '@sanity/icons'
-import OpenAISanity from 'components/atoms/OpenAISanity/OpenAISanity'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
 

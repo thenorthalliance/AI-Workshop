@@ -6,7 +6,7 @@ const Links = () => {
     <main className="w-full mt-10">
       <ul className="flex flex-col gap-20 ">
         <Link
-          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          className="text-center pt-5 h-20 w-6/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
           href="https://www.sanity.io/docs/create-a-sanity-project"
         >
           <li className="">
@@ -15,27 +15,27 @@ const Links = () => {
         </Link>
 
         <Link
-          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          className="text-center pt-5 h-20 w-6/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
           href="https://www.sanity.io/guides/your-first-input-component-for-sanity-studio-v3"
         >
           <li> Sanity studio custom component</li>
         </Link>
 
         <Link
-          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          className="text-center pt-5 h-20 w-6/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
           href="https://platform.openai.com/docs/api-reference/making-requests"
         >
           <li>OpenAI - requests</li>
         </Link>
 
         <Link
-          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          className="text-center pt-5 h-20 w-6/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
           href="https://tailwindcss.com/"
         >
           <li> TailwindCSS</li>
         </Link>
         <Link
-          className="text-center pt-5 h-20 w-11/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
+          className="text-center pt-5 h-20 w-6/12 m-auto  bg-black hover:shadow-xl text-white text-xl  rounded-xl shadow-md"
           href="https://platform.openai.com/docs/guides/images"
         >
           <li>OpenAI - Images</li>
