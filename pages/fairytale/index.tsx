@@ -26,7 +26,6 @@ const StoriesPage = ({ fairytales }: PageProps) => {
               <h2> Espen askeladden </h2>
               </Link>
 
-
             */}
         </section>
       </main>

@@ -17,10 +17,22 @@ interface Query {
   [key: string]: string
 }
 
+const generateNewStoryImage = async () => {}
+
+const handleGenerateStory = async () => {
+  //
+}
+
 const FairtalePage = ({ fairytale }: PageProps) => {
   return (
     <>
       <main className="pb-10">
+        <button
+          className="bg-slate-500 m-5 rounded-md px-2"
+          onClick={handleGenerateStory}
+        >
+          Generate text
+        </button>
         {/* 
       Example on how you can import the image:
             <Image
