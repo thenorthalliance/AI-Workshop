@@ -42,13 +42,6 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'story',
-      title: 'Story',
-      type: 'text',
-      description: 'The story of the fairytale',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'coverImage',
       title: 'Cover Image',
       type: 'image',
