@@ -8,40 +8,62 @@ a) Individual assignment: Introduce yourself to the team. Tell the group your na
 
 b) Group assignment: Give your group a name. Need some help coming up with names? Ask [ChatGPT](https://chat.openai.com/auth/login?next=%2F) to give some examples! 
 
+In this workshop, the teams will use AI to generate fairytales and images. You will experiment and challenge the gender bias that is in today's AI. The goal is to use an existing fairytale or generate a new one with AI to rewrite or change the perspective or gender of the main character
+
+The teams are going to integrate OpenAI API into sanity to generate text and images.
+
 ## Get started
 
 1. One initial person on the team fork the repo to his/hers github.
 2. The initial person adds your team members as contributors/admin to the repo
 3. The rest of the team clones the repo from the initial persons github.
-4. Create a .env file in the root folder and copy paste the example .env from discord
+4. Create a .env file in the root folder and copy paste the example `.env` from discord. Channels are created for each group
 5. Open terminal inside the root folder and run `npm install`
 6. Once the install is complete, run `npm run dev`
 7. Open up your browser and go to  [http://localhost:3000/studio/desk](http://localhost:3000/studio)
+8. Click on "Fairytales" and observe that you have 3 documents containing 3 Norwegian fairytales
 
 
 ## The Challenge
 
-1. First task will be to connect the premade React component inside the studio to generate text from OpenAI, you will find this file at `/components/OpenAISanity/OpenAISanity.tsx`. You will need to create a function to fetch data from OpenAI. Once you created this function you will need to create a on click function trigger the generate text.  [https://platform.openai.com/docs/api-reference/introduction](https://platform.openai.com/docs/api-reference/introduction).
+**Task One** will be to connect the pre-made React component inside the studio to generate text from OpenAI. You will find this file at /components/OpenAISanity/OpenAISanity.tsx. 
+
+a) Update const callApi to fetch data from OpenAI (check the code for tips.
+b) Inside the generateStory function you should call the callApi function you wrote over.
+
+Click on one of the fairytales and observe that you have an OpenAI text generator input field that you can test.
+Remember to Publish changes done in sanity studio. (It's a green button at the bottom of the page)
+
 
 Example
 ![NOA](https://www.linkpicture.com/q/Screenshot-2023-04-13-at-20.28.59.png)
 
 
-2. Task 2 will be the connection from Sanity to NextJS. Inside `Pages/fairytale/index.tsx` we have created a skeleton for you. Your task will be to print out the title, slug and image from Sanity. Create a grid layout with each fairytale and make each fairytale link up to it's own slug page `Pages/fairytale/[slug].tsx`. 
+**Task two** : Finish the skeleton of the slug page. We have already fetched the data from Sanity and hooked it up to the fairytale interface. You will find this file in pages/fairytale/slug.tsx
+a. Print out the image, generated text and the title.
+b. Bonus: Give it some styling!
+PS! Remember to generate the story in sanity studio and Publish.
+
 
 Example
 ![NOA](https://www.linkpicture.com/q/Screenshot-2023-04-13-at-20.36.17.png)
 
 
-3. Task three is to create the slug page of each fairytale.  Inside the slug page you will need to show the title, image, history and the generated text. 
+**Task Tree**: Continuing on the [slug] page.  Generate an image with the OpenAI api. This image will not be added to sanity, it will only be added to the frontend.  
+a. Replace the image prompt text with your own custom prompt in the function "generateNewStoryImage". And see the results.
+
+
+
 
 Example
 ![NOA](https://www.linkpicture.com/q/Screenshot-2023-04-13-at-20.44.14.png)
 
-4. Task four will be to connect the generated text and make it generate a image with the OpenAI API. Documentation [here](https://platform.openai.com/docs/guides/images).
+**Task Four** is where the magic happens! Your team will need to be creative and write some good prompts. Discuss how the prompts you write influence the results. We would love to see your progress and failed attempts, so save them for your presentation for later.
+a. Use the sanity data and improve upon the imagePromt variable to get a good result.
+b. Experiment and have fun! 
 
 
-5. Task five is to create the best prompt. 
+
 
 
 
