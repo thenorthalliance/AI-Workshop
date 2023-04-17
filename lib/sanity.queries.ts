@@ -1,6 +1,5 @@
 import { groq } from 'next-sanity'
 
-
 const fairytaleFields = groq`
   _id,
   title,
@@ -33,8 +32,8 @@ export interface iFairytale {
   _id: string
   title?: string
   coverImage?: any
-  excerpt?: string
   slug?: string
   content?: any
   story?: string
+  generateText?: string
 }

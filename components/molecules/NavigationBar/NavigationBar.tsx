@@ -11,13 +11,17 @@ const linkElements = [
     href: '/links',
     text: 'Links',
   },
+  {
+    href: '/studio',
+    text: 'Studio',
+  },
 ]
 
 const NavigationBar = () => {
   const router = useRouter()
 
   return (
-    <nav className="relative flex justify-between bg-black p-4 text-white">
+    <nav className="relative flex justify-between p-4 text-white bg-black">
       <Link href="/">SHE Workshop</Link>
       <ul className="flex gap-4">
         {linkElements.map(({ href, text }) => {

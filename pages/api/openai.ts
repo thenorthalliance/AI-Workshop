@@ -23,7 +23,7 @@ export default async function handler(
   res: NextApiResponse<ResponseData>
 ) {
   const promt = req.body.prompt
-  const maxTokens = req.body.maxTokens || 100
+  const maxTokens = req.body.maxTokens || 300
 
   if (!promt || promt === '') {
     res.status(400).json({ text: 'No prompt provided' })

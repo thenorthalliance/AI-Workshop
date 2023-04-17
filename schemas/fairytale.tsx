@@ -1,6 +1,5 @@
 import { BookIcon } from '@sanity/icons'
 import OpenAISanity from 'components/OpenAISanity/OpenAISanity'
-import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
 
 /**
@@ -25,7 +24,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      description: 'The title of the post',
+      description: 'The title of the fairytale',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -41,29 +40,38 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
     }),
+
     defineField({
       name: 'coverImage',
       title: 'Cover Image',
       type: 'image',
-      description: 'This is the image that will be shown on the post page',
+      description:
+        'Add a cover image to the fairytale page, try generating something cool with Dall-E or Midjourney',
       options: {
         hotspot: true,
       },
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'generateText',
       title: 'OpenAI text generator',
       type: 'string',
-      description: ' Tell it to write something cool..',
+      description: 'Instruct the OpenAI text generator to generate a story',
       components: {
         input: OpenAISanity,
       },
     }),
+    defineField({
+      name: 'story',
+      title: 'Story',
+      type: 'text',
+      description: 'Placeholder text for the fairytale',
+    }),
+    // If you are done, feel free to add more fields and experiment!
   ],
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
       media: 'coverImage',
     },
     prepare({ title, media }) {

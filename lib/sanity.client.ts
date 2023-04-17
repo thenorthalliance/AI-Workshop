@@ -14,8 +14,8 @@ const client = projectId
   ? createClient({ projectId, dataset, apiVersion, useCdn })
   : null
 
-
 export async function getAllFairytaleSlugs(): Promise<Pick<Post, 'slug'>[]> {
+  // get all the slugs from sanity
   if (client) {
     const slugs = (await client.fetch<string[]>(fairytaleSlugsQuery)) || []
     return slugs.map((slug) => ({ slug }))
@@ -24,6 +24,7 @@ export async function getAllFairytaleSlugs(): Promise<Pick<Post, 'slug'>[]> {
 }
 
 export async function getAllFairytales(): Promise<iFairytale[]> {
+  // get all the fairytale from sanity
   if (client) {
     return (await client.fetch(allFairyTalesQuery)) || []
   }
@@ -31,8 +32,9 @@ export async function getAllFairytales(): Promise<iFairytale[]> {
 }
 
 export async function getFairytale(slug: string) {
+  // get the fairytale by slug from sanity
   const results = await client.fetch(
-    `*[_type == "fairytale" && slug.current == $slug]{ _id, title, 'slug': slug.current, coverImage, excerpt, story}[0]`,
+    `*[_type == "fairytale" && slug.current == $slug]{ _id, title, 'slug': slug.current, coverImage, generateText, story}[0]`,
     {
       slug,
     }
