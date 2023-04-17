@@ -56,7 +56,8 @@ export default defineType({
       name: 'generateText',
       title: 'OpenAI text generator',
       type: 'string',
-      description: 'Instruct the OpenAI text generator to generate a story',
+      description:
+        'Use an existing fairytale promt to generate a new fairytale, or write your own prompt',
       components: {
         input: OpenAISanity,
       },
