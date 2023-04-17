@@ -20,7 +20,16 @@ interface Query {
 const FairtalePage = ({ fairytale }: PageProps) => {
   return (
     <>
-      <main className="pb-10">{/*  */}</main>
+      <main className="pb-10">
+        {/* 
+      Example on how you can import the image:
+            <Image
+            src={urlForImage(data.image).url()}
+            alt=""
+            className="""
+          />
+      */}
+      </main>
     </>
   )
 }

@@ -18,11 +18,16 @@ const StoriesPage = ({ fairytales }: PageProps) => {
             Eventyr
           </h1>
 
-          {/* Example how to Link to slug page:
-          <Link href={`/fairytale/${fairytale.slug}`}></Link>
-          */}
+          {/* 
+            Map through an array:  {array.map((itemInsideArray) => itemInsideArray.title)}
+            
+          Link to slug page:
+              <Link href={`/fairytale/${fairytale.slug}`}>
+              <h2> Espen askeladden </h2>
+              </Link>
 
-          <ul className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4 mx-12"></ul>
+
+            */}
         </section>
       </main>
     </>
