@@ -1,6 +1,13 @@
 # SHE - hackathon
 
 ![NOA](https://www.sympa.com/hubfs/Noa%20logo%20grey.png)
+
+## ICEBREAKER
+
+a) Individual assignment: Introduce yourself to the team. Tell the group your name, occupation, favourite food and Sanity experience/skill level.
+
+b) Group assignment: Give your group a name. Need some help coming up with names? Ask [ChatGPT](https://chat.openai.com/auth/login?next=%2F) to give some examples! 
+
 ## Get started
 
 1. One initial person on the team fork the repo to his/hers github.
