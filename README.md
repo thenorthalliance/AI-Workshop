@@ -48,13 +48,13 @@ Example
 PS! Remember to generate the story in sanity studio and Publish.
 
 3 <br/>
-**Task Tree**: Continuing on the [slug] page.  Generate an image with the OpenAI api. This image will not be added to sanity, it will only be added to the frontend.  
+**Task Three**: Continuing on the [slug] page.  Generate an image with the OpenAI api. This image will not be added to sanity, it will only be added to the frontend.  
 *Replace the image prompt text with your own custom prompt in the function `generateNewStoryImage`. And see the results.*
 
 
 4 <br/>
 **Task Four** is where the magic happens! Your team will need to be creative and write some good prompts. Discuss how the prompts you write influence the results. We would love to see your progress and failed attempts, so save them for your presentation for later.  
-*a. Use the sanity data and improve upon the `imagePromt` variable to get a good result.*  
+*a. Use the sanity data such as `${fairytale.title}` or `${fairytale.generateText}` and improve upon the `imagePromt` variable to get a good result.*  
 *b. Experiment and have fun!* 
 
 ## Code Examples
