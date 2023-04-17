@@ -40,7 +40,6 @@ const StoriesPage = ({ fairytales }: PageProps) => {
                     <h3> {fairytale.title}</h3>
                   </Link>
 
-                  {/* <p>{fairytale.excerpt}</p> */}
                 </div>
               </li>
             ))}
