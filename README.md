@@ -31,7 +31,7 @@ Following our challenge you must upload an image in sanity and you can generate 
 1 <br/>
 **Task One** will be to connect the pre-made React component inside the studio to generate text from OpenAI. You will find this file at `/components/OpenAISanity/OpenAISanity.tsx`. 
 
-a) Update `const callApi` to fetch data from OpenAI (check the code for tips)
+a) Update `const callApi` to fetch data from OpenAI (check the code for tips)   
 b) Inside the `generateStory` function you should call the `callApi` function you wrote over.
 
 Click on one of the fairytales and observe that you have an OpenAI text generator input field that you can test.
@@ -43,13 +43,13 @@ Example
 
 2 <br/>
 **Task two** : Finish the skeleton of the slug page. We have already fetched the data from Sanity and hooked it up to the fairytale interface. You will find this file in `pages/fairytale/slug.tsx`  
-*a) Print out the image, generated text and the title.*  
+*a) Print out the image, generated text and the title on the frontend page.*  
 *b) Bonus: Give it some styling!*  
 PS! Remember to generate the story in sanity studio and Publish.
 
 3 <br/>
 **Task Tree**: Continuing on the [slug] page.  Generate an image with the OpenAI api. This image will not be added to sanity, it will only be added to the frontend.  
-*Replace the image prompt text with your own custom prompt in the function "generateNewStoryImage". And see the results.*
+*Replace the image prompt text with your own custom prompt in the function `generateNewStoryImage`. And see the results.*
 
 
 4 <br/>
