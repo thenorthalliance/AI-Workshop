@@ -18,7 +18,7 @@ const NavigationBar = () => {
 
   return (
     <nav className="relative flex justify-between bg-black p-4 text-white">
-      <Link href="/">SHE Workshop</Link>
+      <Link href="/">Workshop</Link>
       <ul className="flex gap-4">
         {linkElements.map(({ href, text }) => {
           const isSelected = router.pathname === href
