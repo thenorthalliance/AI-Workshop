@@ -11,11 +11,13 @@ export default function StudioPage() {
         <NextStudioHead favicons={false} />
       </Head>
 
-      <NextStudio config={config}>
-        <StudioProvider config={config}>
-          <StudioLayout />
-        </StudioProvider>
-      </NextStudio>
+      <main className="relative flex h-[95vh] w-full flex-1 flex-col">
+        <NextStudio config={config}>
+          <StudioProvider config={config}>
+            <StudioLayout />
+          </StudioProvider>
+        </NextStudio>
+      </main>
     </>
   )
 }

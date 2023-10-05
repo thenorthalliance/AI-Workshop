@@ -1,49 +1,88 @@
-import NavigationBar from 'components/molecules/NavigationBar'
 import Link from 'next/link'
-import React from 'react'
+import { FaExternalLinkAlt } from 'react-icons/fa'
+
+const linkElements = [
+  {
+    label: 'Sanity - Create a Sanity project',
+    href: 'https://www.sanity.io/docs/create-a-sanity-project',
+    description: 'How to create a Sanity project from scratch',
+    tags: ['sanity', 'cms'],
+  },
+  {
+    label: 'Sanity - Create custom studio component',
+    href: 'https://www.sanity.io/guides/your-first-input-component-for-sanity-studio-v3',
+    description: 'How to create a custom component for Sanity studio',
+    tags: ['sanity', 'studio', 'cms'],
+  },
+  {
+    label: 'Sanity - Groq Query Language',
+    href: 'https://www.sanity.io/docs/query-cheat-sheet',
+    description: 'Sanity Groq query cheat sheet',
+    tags: ['sanity', 'groq', 'cms'],
+  },
+  {
+    label: 'OpenAI - requests',
+    href: 'https://platform.openai.com/docs/api-reference/making-requests',
+    description: 'OpenAI - requests documentation',
+    tags: ['openai'],
+  },
+  {
+    label: 'OpenAI - Images',
+    href: 'https://platform.openai.com/docs/guides/images',
+    description: 'Documentation for OpenAI image generation',
+    tags: ['openai', 'images'],
+  },
+  {
+    label: 'Next.js - documentation',
+    href: 'https://nextjs.org/docs',
+    description:
+      'Documentation for Next.js - We are using Pages Directory Routing',
+    tags: ['nextjs', 'framework'],
+  },
+  {
+    label: 'TailwindCSS',
+    href: 'https://tailwindcss.com/',
+    description: 'TailwindCSS documentation',
+    tags: ['tailwind', 'css'],
+  },
+  {
+    label: 'React Icons',
+    href: 'https://react-icons.github.io/react-icons/',
+    description: 'Documentation for React Icons',
+    tags: ['react', 'icons'],
+  },
+]
 
 const Links = () => {
   return (
     <>
-      <NavigationBar />
-      <main className="w-full mt-10">
-        <ul className="flex flex-col gap-20 ">
-          <Link
-            className="w-6/12 h-20 pt-5 m-auto text-xl text-center text-white bg-black shadow-md rounded-xl hover:shadow-xl"
-            href="https://www.sanity.io/docs/create-a-sanity-project"
-          >
-            <li className="">
-              <p>Create a Sanity project</p>
-            </li>
-          </Link>
-
-          <Link
-            className="w-6/12 h-20 pt-5 m-auto text-xl text-center text-white bg-black shadow-md rounded-xl hover:shadow-xl"
-            href="https://www.sanity.io/guides/your-first-input-component-for-sanity-studio-v3"
-          >
-            <li> Sanity studio custom component</li>
-          </Link>
-
-          <Link
-            className="w-6/12 h-20 pt-5 m-auto text-xl text-center text-white bg-black shadow-md rounded-xl hover:shadow-xl"
-            href="https://platform.openai.com/docs/api-reference/making-requests"
-          >
-            <li>OpenAI - requests</li>
-          </Link>
-
-          <Link
-            className="w-6/12 h-20 pt-5 m-auto text-xl text-center text-white bg-black shadow-md rounded-xl hover:shadow-xl"
-            href="https://tailwindcss.com/"
-          >
-            <li> TailwindCSS</li>
-          </Link>
-          <Link
-            className="w-6/12 h-20 pt-5 m-auto text-xl text-center text-white bg-black shadow-md rounded-xl hover:shadow-xl"
-            href="https://platform.openai.com/docs/guides/images"
-          >
-            <li>OpenAI - Images</li>
-          </Link>
-        </ul>
+      <main className="h-screen w-full bg-stone-100 p-8">
+        <section className="grid grid-cols-12 gap-8">
+          {linkElements.map(({ label, href, description, tags }) => (
+            <Link
+              key={href}
+              href={href}
+              target="_blank"
+              className="col-span-6 rounded-xl bg-white p-6 drop-shadow-md hover:drop-shadow-lg lg:col-span-4"
+            >
+              <div className="flex items-center gap-3">
+                <FaExternalLinkAlt />
+                <strong>{label}</strong>
+              </div>
+              <p>{description}</p>
+              <ul className="mt-1 flex gap-2">
+                {tags.map((tag) => (
+                  <li
+                    key={tag}
+                    className="bg-green-200 px-1 py-0.5 text-xs capitalize text-gray-500"
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </Link>
+          ))}
+        </section>
       </main>
     </>
   )

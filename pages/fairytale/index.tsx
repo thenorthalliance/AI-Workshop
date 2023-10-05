@@ -1,4 +1,3 @@
-import NavigationBar from 'components/molecules/NavigationBar'
 import { getAllFairytales } from 'lib/sanity.client'
 import { urlForImage } from 'lib/sanity.image'
 import { iFairytale } from 'lib/sanity.queries'
@@ -13,10 +12,9 @@ interface PageProps {
 const StoriesPage = ({ fairytales }: PageProps) => {
   return (
     <>
-      <NavigationBar />
       <main className="min-h-screen p-4">
         <section className="">
-          <h1 className="py-10 font-extrabold text-center text-transparent bg-gradient-to-r from-pink-300 to-purple-600 bg-clip-text sm:text-7xl md:text-7xl lg:text-8xl xl:text-8xl">
+          <h1 className="bg-gradient-to-r from-pink-300 to-purple-600 bg-clip-text py-10 text-center font-extrabold text-transparent sm:text-7xl md:text-7xl lg:text-8xl xl:text-8xl">
             Eventyr
           </h1>
           <div className="grid grid-cols-4 gap-4">
@@ -26,11 +24,11 @@ const StoriesPage = ({ fairytales }: PageProps) => {
                   <Image
                     src={urlForImage(fairytale.coverImage).url()}
                     alt=""
-                    className="object-cover w-full h-full rounded-lg"
+                    className="h-full w-full rounded-lg object-cover"
                     fill
                   />
                 </div>
-                <h2 className="text-2xl font-bold text-center text-gray-800">
+                <h2 className="text-center text-2xl font-bold text-gray-800">
                   {fairytale.title}
                 </h2>
               </Link>

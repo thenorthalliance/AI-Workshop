@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import NavigationBar from 'components/molecules/NavigationBar'
 import { getAllFairytaleSlugs, getFairytale } from 'lib/sanity.client'
 import { iFairytale } from 'lib/sanity.queries'
 import { GetStaticProps } from 'next'
@@ -59,10 +58,9 @@ const FairtalePage = ({ fairytale }: PageProps) => {
 
   return (
     <>
-      <NavigationBar />
       <main className="pb-10">
         <button
-          className="px-2 m-5 rounded-md bg-slate-500"
+          className="m-5 rounded-md bg-slate-500 px-2"
           onClick={handleGenerateImage}
         >
           Generate image
