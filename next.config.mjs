@@ -5,6 +5,7 @@ const config = {
       { hostname: 'cdn.sanity.io' },
       { hostname: 'source.unsplash.com' },
       { hostname: 'oaidalleapiprodscus.blob.core.windows.net' },
+      { hostname: 'www.linkpicture.com' },
     ],
     // domains: ['oaidalleapiprodscus.blob.core.windows.net'],
   },
