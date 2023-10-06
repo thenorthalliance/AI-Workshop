@@ -51,6 +51,12 @@ const linkElements = [
     description: 'Documentation for React Icons',
     tags: ['react', 'icons'],
   },
+  {
+    label: 'React Aria',
+    href: 'https://www.npmjs.com/package/react-aria',
+    description: 'Package for React Aria - Accessible UI primitives for React',
+    tags: ['react', 'aria', 'headless', 'components'],
+  },
 ]
 
 const Links = () => {

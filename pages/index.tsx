@@ -2,6 +2,7 @@ import NoaIgnite from 'lib/icons/NoaIgnite'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaIcicles } from 'react-icons/fa'
 
 export default function Page() {
   const code = `
@@ -80,102 +81,268 @@ const generateStory = async () => {
             </Link>
           </section>
         </section>
-        <section className="bg-white px-4 text-black"></section>
-        <section className="px-4 py-20">
+        <section className="bg-purple-500/90 px-4 py-20">
           <div className="mx-auto max-w-2xl">
-            <h2>ICEBREAKER</h2>
-            <ol className="list-decimal">
-              <li>
-                Individual assignment: Introduce yourself to the team. Tell the
-                group your name, occupation, favourite food and Sanity
-                experience/skill level.
-              </li>
-              <li>
-                Group assignment: Give your group a name. Need some help coming
-                up with names? Ask{' '}
-                <a href="https://chat.openai.com/auth/login?next=%2F">
-                  ChatGPT
-                </a>{' '}
-                to give some examples!
-              </li>
-            </ol>
-            <div className="py-4">
+            <div className="flex items-center gap-2">
+              <h2>ICEBREAKER:</h2>
+              <FaIcicles className="text-2xl" />
+            </div>
+
+            <h3>Individual Introduction:</h3>
+            <p>
+              Each team member should introduce themselves to the group. Share
+              your:
+            </p>
+            <ul className="list-inside list-disc pb-4">
+              <li>Name</li>
+              <li>School year</li>
+              <li>Favorite Food</li>
+              <li>Experience/Skill Level with Sanity/NextJS/OpenAI</li>
+            </ul>
+
+            <div className="pb-4">
+              <h3>Group Assignment:</h3>
               <p>
-                In this workshop, the teams will use AI to generate fairytales
-                and images. You will experiment and challenge the gender bias
-                that is in today&apos;s AI. The goal is to use an existing
-                fairytale or generate a new one with AI to rewrite or change the
-                perspective or gender of the main character
+                As a group, brainstorm and choose a unique team name. If you
+                need inspiration, feel free to ask ChatGPT for some creative
+                suggestions.
               </p>
+            </div>
+            <div className="pb-4">
+              <h2>Workshop Overview:</h2>
               <p>
-                The teams are going to integrate OpenAI API into sanity to
-                generate text and images.
+                In this workshop, teams will harness the power of AI to create
+                fairytales and images. Our primary objective is to address and
+                challenge the gender bias that often exists in contemporary AI.
+                We aim to achieve this by either modifying existing fairytales
+                or generating entirely new ones using AI, with a focus on
+                altering the perspective or gender of the main character.
               </p>
+            </div>
+
+            <div className="pb-4">
+              <h2>Technical Integration:</h2>
               <p>
-                Following our challenge you must upload an image in sanity and
-                you can generate images with AI that will only be integrated in
-                the frontend not saved to sanity. If you are pro and want to
-                integrate it go ahead.
+                Teams will be tasked with integrating the OpenAI API into Sanity
+                to generate both text and images.
               </p>
+            </div>
+
+            <div className="pb-4">
+              <h2>Challenge Outcome:</h2>
+              <p>
+                After successfully completing the challenge, each team must:
+              </p>
+              <ul className="list-inside list-disc ">
+                <li>Upload an image to Sanity.</li>
+                <li>
+                  Generate images with AI, which will be integrated into the
+                  frontend (optional, not mandatory to save to Sanity). If you
+                  have the expertise and wish to save them in Sanity, you are
+                  welcome to do so.
+                </li>
+              </ul>
             </div>
           </div>
         </section>
         <section className="bg-white px-4 py-20 text-black">
           <div className="mx-auto max-w-2xl">
             <h2>Getting started</h2>
-            <ol className="list list-decimal">
+            <ol className="list-decimal">
               <li>
-                <p>
-                  One initial person on the team fork the repo to his/hers
-                  github.
-                </p>
+                <strong>Repository Setup:</strong>
+                <ul className="list-inside list-disc">
+                  <li>
+                    Designate one team member to fork the repository to their
+                    GitHub account.
+                  </li>
+                  <li>
+                    The initial person adds team members as contributors/admins
+                    to the repository.
+                  </li>
+                </ul>
               </li>
+
               <li>
-                <p>
-                  The initial person adds your team members as
-                  contributors/admin to the repo
-                </p>
+                <strong>Clone Repository:</strong>
+                <ul className="list-inside list-disc">
+                  <li>
+                    Each team member clones the repository from the initial
+                    person&#39;s GitHub account to their local machine.
+                  </li>
+                </ul>
               </li>
+
               <li>
-                The rest of the team clones the repo from the initial persons
-                github.
+                <strong>Environment Configuration:</strong>
+                <ul>
+                  <li>
+                    Create a <code>.env</code> file in the root folder.
+                  </li>
+                  <li>
+                    Copy and paste the example <code>.env</code> configuration
+                    from the Discord or relevant source.
+                  </li>
+                </ul>
               </li>
+
               <li>
-                Create a <code className="bg-gray-200 p-0.5">.env</code> file in
-                the root folder and copy paste the example{' '}
-                <code className="bg-gray-200 p-0.5">.env</code> from discord.
-                Channels are created for each group
+                <strong>Channel Creation:</strong>
+                <ul className="list-inside list-disc">
+                  <li>
+                    Set up communication channels or groups within your chosen
+                    communication platform (e.g., Discord channels) to
+                    facilitate collaboration among team members.
+                  </li>
+                </ul>
               </li>
+
               <li>
-                <p>
-                  Open terminal inside the root folder and run{' '}
-                  <code className="bg-gray-200 p-0.5">npm install</code>
-                </p>
+                <strong>Dependency Installation:</strong>
+                <ul className="list-inside list-disc">
+                  <li>
+                    Open a terminal inside the root folder of the project.
+                  </li>
+                  <li>
+                    Run <code className="bg-gray-200 p-1">npm install</code> to
+                    install project dependencies.
+                  </li>
+                </ul>
               </li>
+
               <li>
-                <p>
-                  Once the install is complete, run:{' '}
-                  <code className="bg-gray-200 p-0.5">npm run dev</code>
-                </p>
+                <strong>Start Development Server:</strong>
+                <ul className="list-inside list-disc">
+                  <li>
+                    After the installation is complete, run{' '}
+                    <code className="bg-gray-200 p-1">npm run dev</code> to
+                    start the development server.
+                  </li>
+                </ul>
               </li>
+
               <li>
-                <p>
-                  Open up your browser and go to{' '}
+                <strong>Testing and Verification:</strong>
+                <ul className="list-inside list-disc">
+                  <li>
+                    Open your web browser and navigate to{' '}
+                    <a
+                      href="http://localhost:3000/studio"
+                      target="_blank"
+                      className="bg-gray-200 p-1"
+                    >
+                      http://localhost:3000/studio
+                    </a>
+                    .
+                  </li>
+                  <li>
+                    Click on &quot;Fairytales&quot; to verify that you have
+                    three documents containing three Norwegian fairytales.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </section>
+        <section className="bg-white py-20 text-black">
+          <div className="mx-auto max-w-2xl">
+            <h2>Step-by-Step Guide: Generating a Sanity Studio Project ID</h2>
+
+            <ol className="mt-4 list-decimal">
+              <li>
+                <strong>Sign Up for Sanity.io</strong>
+                <p className="mt-2">
+                  Visit the{' '}
                   <a
-                    href="http://localhost:3000/studio/desk"
+                    href="https://www.sanity.io/"
+                    target="_blank"
                     className="underline"
                   >
-                    <strong>http://localhost:3000/studio</strong>
+                    Sanity.io website
                   </a>
+                  .
+                </p>
+                <p className="mt-2">
+                  Click on &#34;Get Started&#34; to create your account. Provide
+                  your name, email, and a secure password.
+                </p>
+              </li>
+
+              <li>
+                <strong className="">Log In to Your Sanity.io Account</strong>
+                <p className="mt-2">
+                  After signing up, log in to your Sanity.io account using your
+                  credentials.
+                </p>
+              </li>
+
+              <li>
+                <strong className="">Create a New Project</strong>
+                <p className="mt-2">
+                  Once logged in, click on the &#34;New Project&#34; button to
+                  initiate the project creation process.
+                </p>
+              </li>
+
+              <li>
+                <strong className="">Configure Your Project</strong>
+                <p className="mt-2">
+                  Choose a project name, billing plan, and any additional
+                  options as needed. Confirm your selections.
+                </p>
+              </li>
+
+              <li>
+                <strong className="">Project Setup</strong>
+                <p className="mt-2">
+                  Select a project template or start with a blank project based
+                  on your requirements.
+                </p>
+              </li>
+
+              <li>
+                <strong className="">Wait for Project Creation</strong>
+                <p className="mt-2">
+                  Sanity.io will create your project. This may take a few
+                  moments, so please be patient.
+                </p>
+              </li>
+
+              <li>
+                <strong className="">Access the Project ID</strong>
+                <p className="mt-2">
+                  Upon project creation, you&#39;ll find your unique project ID
+                  in the project dashboard or settings. It&#39;s typically a
+                  long string of characters.
                 </p>
               </li>
               <li>
-                <p>
-                  Click on &quot;Fairytales&quot; and observe that you have 3
-                  documents containing 3 Norwegian fairytales
+                <strong>
+                  Add the Project ID to Your Environment Configuration
+                </strong>
+                <p className="mt-2">
+                  Copy and paste your project ID into the{' '}
+                  <code className="bg-gray-200 p-1">.env</code> file.
                 </p>
               </li>
             </ol>
+
+            <p className="font-semiborder-l-primary mt-8 bg-green-500 p-4 text-center text-white">
+              Congratulations! You&#39;ve successfully generated a Sanity Studio
+              Project ID.
+            </p>
+
+            <p className="mt-4">
+              For any updates or changes to the process, please refer to the{' '}
+              <a
+                href="https://www.sanity.io/docs"
+                target="_blank"
+                className="underline"
+              >
+                Sanity.io documentation
+              </a>
+              .
+            </p>
           </div>
         </section>
         <section className="py-20">
@@ -267,7 +434,7 @@ const generateStory = async () => {
               </p>
             </div>
             <pre className="whitespace-pre-wrap bg-gray-200 p-2 text-black ">
-              <code>
+              <code className="bg-gray-200 p-1">
                 _Replace the image prompt text with your own custom prompt in
                 the function `generateNewStoryImage`. And see the results._
               </code>
