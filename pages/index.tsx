@@ -79,6 +79,9 @@ const generateStory = async () => {
             >
               Github Repository
             </Link>
+            <Link href="https://discord.com/servers" className="underline">
+              Discord Server
+            </Link>
           </section>
         </section>
         <section className="bg-purple-500/90 px-4 py-20">
