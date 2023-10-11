@@ -13,21 +13,23 @@ interface Query {
   [key: string]: string
 }
 
-const generateNewStoryImage = async () => {
-  // Add your code here
-}
-
-const handleGenerateStory = async () => {
-  // Add your code here
-}
-
 const FairtalePage = ({ fairytale }: PageProps) => {
   const [storyImage, setStoryImage] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
+  const handleGenerateStory = async () => {
+    // Add your code here
+  }
+
   const generateNewStoryImage = async () => {
-    // Add code here to genereate a new story image based on sanity data, be creative!
-    const imagePromt = 'placeholder'
+    // Add code here to generate a new story image based on sanity data, be creative!
+
+    // Use values from the fairytale object to generate a prompt, you might have to get creative here.
+    // The prompt should be a string that is passed to the openai-image API.
+    // The API will return a text string that you can use to set the storyImage state.
+    // The API is not perfect, so you might have to try a few times to get a good result.
+
+    const imagePrompt = 'placeholder'
 
     try {
       const response = await fetch('/api/openai-image', {
@@ -36,14 +38,14 @@ const FairtalePage = ({ fairytale }: PageProps) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          prompt: imagePromt,
+          prompt: imagePrompt,
         }),
       }).then((res) => res.json())
 
       if (response.text) {
         setStoryImage(response.text)
       } else {
-        console.log('error')
+        console.log('Error: response text is undefined')
       }
     } catch (err) {
       console.error(err)

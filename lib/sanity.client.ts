@@ -33,8 +33,10 @@ export async function getAllFairytales(): Promise<iFairytale[]> {
 
 export async function getFairytale(slug: string) {
   // get the fairytale by slug from sanity
+
+  // We are currently fetching, _id, title, slug, coverImage, story, but you can fetch whatever you want from sanity. Let's say you had a value called `author` you could fetch that by adding it to the query like so: `author`
   const results = await client.fetch(
-    `*[_type == "fairytale" && slug.current == $slug]{ _id, title, 'slug': slug.current, coverImage, generateText, story}[0]`,
+    `*[_type == "fairytale" && slug.current == $slug]{ _id, title, 'slug': slug.current, coverImage, story}[0]`,
     {
       slug,
     }

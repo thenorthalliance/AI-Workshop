@@ -40,7 +40,7 @@ const generateStory = async () => {
         <title>AI Workshop</title>
         <meta name="description" content="AI Workshop" />
       </Head>
-      <main className="bg-black/90 leading-relaxed text-white ">
+      <main className="overflow-x-clip bg-black/80 leading-relaxed text-white">
         <section className="flex min-h-[764px] flex-col items-center justify-center px-4">
           <div className="flex flex-col items-center gap-2 p-8 ring ring-white">
             <h1>AI WORKSHOP</h1>
@@ -49,42 +49,77 @@ const generateStory = async () => {
           </div>
           <div className="flex flex-col items-center justify-center gap-2 fill-white pt-8">
             <p>Made by</p>
-            <Link href="https://www.noaignite.no/" className="fill-white">
+            <a
+              href="https://www.noaignite.no/"
+              className="fill-white"
+              target="_blank"
+            >
               <span className="fill-white">
                 <NoaIgnite />
               </span>
-            </Link>
+            </a>
           </div>
           <section className="flex flex-col items-center justify-center pt-10">
             <p>Powered by</p>
             <div className="flex gap-4 pt-4">
-              <Link href="https://nextjs.org/" className="underline">
+              <a
+                href="https://nextjs.org/"
+                className="underline"
+                target="_blank"
+              >
                 Next.js
-              </Link>
-              <Link href="https://www.sanity.io/" className="underline">
+              </a>
+              <a
+                href="https://www.sanity.io/"
+                className="underline"
+                target="_blank"
+              >
                 Sanity
-              </Link>
-              <Link href="https://openai.com/" className="underline">
+              </a>
+              <a
+                href="https://openai.com/"
+                className="underline"
+                target="_blank"
+              >
                 OpenAI
-              </Link>
+              </a>
             </div>
           </section>
           <section className="flex flex-col items-center gap-4 pt-4">
             <h3>
               <strong>Resources:</strong>
             </h3>
-            <Link
+            <a
               href="https://github.com/thenorthalliance/AI-Workshop"
               className="underline"
+              target="_blank"
             >
               Github Repository
-            </Link>
-            <Link href="https://discord.com/servers" className="underline">
+            </a>
+            <a
+              href="https://discord.com/servers"
+              className="underline"
+              target="_blank"
+            >
               Discord Server
-            </Link>
+            </a>
+            <a
+              href="https://www.sanity.io/docs"
+              className="underline"
+              target="_blank"
+            >
+              Sanity Documentation
+            </a>
+            <a
+              href="https://chat.openai.com/"
+              className="underline"
+              target="_blank"
+            >
+              ChatGPT
+            </a>
           </section>
         </section>
-        <section className="bg-purple-500/90 px-4 py-20">
+        <section className="bg-purple-500/90 px-8 py-20">
           <div className="mx-auto max-w-2xl">
             <div className="flex items-center gap-2">
               <h2>ICEBREAKER:</h2>
@@ -148,7 +183,7 @@ const generateStory = async () => {
             </div>
           </div>
         </section>
-        <section className="bg-white px-4 py-20 text-black">
+        <section className="bg-white px-8 py-20 text-black">
           <div className="mx-auto max-w-2xl">
             <h2>Getting started</h2>
             <ol className="list-decimal">
@@ -247,10 +282,18 @@ const generateStory = async () => {
             </ol>
           </div>
         </section>
-        <section className="bg-white py-20 text-black">
+        <section className="bg-white px-8 py-20 text-black">
           <div className="mx-auto max-w-2xl">
             <h2>Step-by-Step Guide: Generating a Sanity Studio Project ID</h2>
-
+            <div>
+              <p>
+                <strong>Disclaimer!</strong> Okay, hold your horses. In order to
+                access to Sanity studio, you need to generate a project ID(we
+                need this for our .env file). Follow the steps below to generate
+                a project ID, it will create a new repository for you, but you
+                can discard it after you have generated the project ID.
+              </p>
+            </div>
             <ol className="mt-4 list-decimal">
               <li>
                 <strong>Sign Up for Sanity.io</strong>
@@ -348,43 +391,58 @@ const generateStory = async () => {
             </p>
           </div>
         </section>
-        <section className="py-20">
+        <section className="px-8 py-20">
           <div className="mx-auto max-w-2xl">
-            <h2 className="text-7xl text-purple-500">
+            <h2 className="text-purple-500 lg:text-7xl">
               <strong>The Challange</strong>
             </h2>
+            <div className="pt-4">
+              <strong>Let&#39;s get started!</strong>
+            </div>
             <div className="pt-4">
               <h3>Task 1</h3>
               <div className="pb-2">
                 <p>
-                  Connect the pre-made React component inside the studio to
-                  generate text from OpenAI. You will find this file
-                  at`/components/OpenAISanity/OpenAISanity.tsx`.
+                  Integrate the pre-built React component within the studio to
+                  harness the power of OpenAI text generation. You can locate
+                  this component in the file at{' '}
+                  <code className="bg-gray-200 p-0.5 text-black">
+                    /components/OpenAISanity/OpenAISanity.tsx
+                  </code>
                 </p>
               </div>
               <ol className="list-decimal">
                 <li>
                   <p>
-                    Update{' '}
+                    Ensure that you&#39;ve updated the
                     <code className="bg-gray-200 p-0.5 text-black">
                       const callApi
                     </code>{' '}
-                    to fetch data from OpenAI (check the code for tips)
+                    unction to fetch data from OpenAI (refer to the code for
+                    guidance).
                   </p>
                 </li>
                 <li>
                   <p>
-                    Inside the `generateStory` function you should call the
-                    `callApi` function you wrote over.
+                    Within the{' '}
+                    <code className="bg-gray-200 p-0.5 text-black">
+                      generateStory
+                    </code>{' '}
+                    function, make sure to invoke the{' '}
+                    <code className="bg-gray-200 p-0.5 text-black">
+                      callApi
+                    </code>{' '}
+                    function you previously defined.
                   </p>
                 </li>
               </ol>
               <div className="pt-4">
                 <p>
-                  Click on one of the fairytales and observe that you have an
-                  OpenAI text generator input field that you can test. Remember
-                  to Publish changes done in sanity studio. (It&apos;s a green
-                  button at the bottom of the page)
+                  Select one of the fairytales and take note of the OpenAI text
+                  generator input field, which you can use for testing.
+                  Don&#39;t forget to publish any changes made in the Sanity
+                  Studio – the publish button can be found at the bottom of the
+                  page and is denoted by a green icon.
                 </p>
               </div>
               <div className="flex justify-center pt-4">
@@ -399,34 +457,40 @@ const generateStory = async () => {
           </div>
         </section>
 
-        <section className="bg-white py-20 text-black">
+        <section className="bg-white px-8 py-20 text-black">
           <div className="mx-auto max-w-2xl">
             <h3>Task 2</h3>
             <div className="pb-2">
               <p>
-                Finish the skeleton of the slug page. We have already fetched
-                the data from Sanity and hooked it up to the fairytale
-                interface. You will find this file in `pages/fairytale/slug.tsx`
+                Complete the skeleton for the slug page, which involves
+                retrieving data from Sanity and connecting it to the fairytale
+                interface. You can access this file at{' '}
+                <code className="bg-gray-200 p-0.5 text-black">
+                  pages/fairytale/slug.tsx
+                </code>
               </p>
             </div>
             <ol className="list-decimal">
               <li>
                 <p>
-                  Print out the image, generated text and the title on the
-                  frontend page._
+                  On the frontend page, display the image, the generated text,
+                  and the title.
                 </p>
               </li>
               <li>
-                <p>Bonus: Give it some styling!_</p>
+                <p>
+                  As a bonus, add some styling to enhance the page&apos;s
+                  appearance.
+                </p>
               </li>
             </ol>
             <small>
-              Remember to publish changes done in sanity studio. (It&apos;s a
-              green button at the bottom of the page)
+              Don&apos;t forget to publish any changes you make in Sanity Studio
+              by clicking the green button located at the bottom of the page.
             </small>
           </div>
         </section>
-        <section className="py-20">
+        <section className="px-8 py-20">
           <div className="mx-auto max-w-2xl">
             <h3>Task 3</h3>
             <div className="pb-2">
@@ -436,52 +500,112 @@ const generateStory = async () => {
                 added to the frontend.
               </p>
             </div>
-            <pre className="whitespace-pre-wrap bg-gray-200 p-2 text-black ">
-              <code className="bg-gray-200 p-1">
-                _Replace the image prompt text with your own custom prompt in
-                the function `generateNewStoryImage`. And see the results._
-              </code>
-            </pre>
+            Replace the image prompt text with your own custom prompt in the
+            function{' '}
+            <code className="overflow-x-scroll bg-gray-200 p-1 text-black">
+              generateNewStoryImage
+            </code>
+            . The image(s) should reflect the story you have generated.
+            <div className="pt-6">
+              <p>
+                <strong>Hint:</strong> You can use the same function as in Task
+                1
+              </p>
+            </div>
+            <div className="pt-6">
+              <p>
+                <strong>Bonus:</strong> Create a new Sanity Component and
+                generate the image there.
+              </p>
+            </div>
           </div>
         </section>
-        <section className="bg-white py-20 text-black">
+
+        <section className="bg-white px-8 py-20 text-black">
           <div className="mx-auto max-w-2xl">
             <h3>Task 4</h3>
             <div>
               <p>
-                This is where the <strong>magic</strong> happens! Your team will
-                need to be creative and write some good prompts. Discuss how the
-                prompts you write influence the results. We would love to see
-                your progress and failed attempts, so save them for your
-                presentation for later.
+                Absolutely, crafting effective prompts for the OpenAI API can
+                indeed make a significant difference in the quality and
+                relevance of the generated content. Here&apos;s a general
+                approach to consider:
               </p>
             </div>
+            <ol className="list-decimal">
+              <li>
+                <p>
+                  <strong>Clarity and Specificity:</strong> Be clear and
+                  specific in your prompts to get the desired results. Vague
+                  prompts may lead to less relevant outputs
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Length and Detail:</strong> Experiment with prompt
+                  length and detail, finding the right balance between context
+                  and brevity.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Tone and Language:</strong> Use positive or negative
+                  language to influence the tone of the output. Inject creative
+                  language to inspire creativity.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Iteration:</strong> Don&apos;t hesitate to try
+                  variations and synonyms in your prompts. Model responses can
+                  vary.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Balance Control:</strong> Strike a balance between
+                  providing specific instructions and allowing creative freedom.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Conditional Statements:</strong> Use conditionals in
+                  prompts to guide the model&apos;s behavior.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Human Feedback:</strong> Consider a human feedback
+                  loop to improve results and train the model.
+                </p>
+              </li>
+            </ol>
           </div>
         </section>
-        <section className="py-20">
+        <section className="px-8 py-20">
           <div className="mx-auto max-w-2xl">
             <h3>Task 5 - Presentations</h3>
             <div>
               <p>
-                Each team will present their work and results. We will have a
-                short Q&amp;A after each presentation. The presentations will be
-                held in the main room. Each team will have 5 minutes to present,
-                use whatever format you want.
+                Each team will present their work and results in a 5-minute
+                presentation, with the flexibility to use their preferred
+                format. After each presentation, there will be a brief Q&A
+                session for further discussion and questions.
               </p>
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section className="px-4 py-20">
           <div className="mx-auto flex max-w-2xl flex-col gap-8">
             <h3>Example code</h3>
             <pre
-              className="whitespace-pre bg-gray-200 p-2 text-black "
+              className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black "
               title="Code snippet"
             >
               <code>{code}</code>
             </pre>
             <pre
-              className="whitespace-pre bg-gray-200 p-2 text-black"
+              className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black"
               title="Code snippet"
             >
               <code>{code2}</code>
