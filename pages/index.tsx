@@ -92,7 +92,7 @@ const generateStory = async () => {
               className="underline"
               target="_blank"
             >
-              Github Repository - Clone me!
+              Github Repository - use template
             </a>
             <a
               href="https://discord.gg/Quf3vNej4"
