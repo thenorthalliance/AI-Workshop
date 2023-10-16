@@ -1,7 +1,6 @@
 import NoaIgnite from 'lib/icons/NoaIgnite'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { FaIcicles } from 'react-icons/fa'
 
 export default function Page() {
@@ -94,10 +93,10 @@ const generateStory = async () => {
               className="underline"
               target="_blank"
             >
-              Github Repository
+              Github Repository - Clone me!
             </a>
             <a
-              href="https://discord.com/servers"
+              href="https://discord.gg/Quf3vNej4"
               className="underline"
               target="_blank"
             >
@@ -223,6 +222,123 @@ const generateStory = async () => {
                   </li>
                 </ul>
               </li>
+              <details className="my-4 bg-purple-100 p-4 ring ring-purple-500">
+                <summary>
+                  <strong>How to generate a Sanity Studio Project ID</strong>
+                </summary>
+                <section className="p-4 text-black">
+                  <div className="mx-auto max-w-2xl">
+                    <div>
+                      <p>
+                        <strong>Disclaimer!</strong> Okay, hold your horses. In
+                        order to access to the Sanity studio, you need to
+                        generate a project ID(we need this for our .env file).
+                        Follow the steps below to generate a project ID, it will
+                        create a new repository for you, but you can discard it
+                        after you have generated the project ID.
+                      </p>
+                    </div>
+                    <ol className="mt-4 list-decimal">
+                      <li>
+                        <strong>Sign Up for Sanity.io</strong>
+                        <p className="mt-2">
+                          Visit the{' '}
+                          <a
+                            href="https://www.sanity.io/"
+                            target="_blank"
+                            className="underline"
+                          >
+                            Sanity.io website
+                          </a>
+                          .
+                        </p>
+                        <p className="mt-2">
+                          Click on &#34;Get Started&#34; to create your account.
+                          Provide your name, email, and a secure password.
+                        </p>
+                      </li>
+
+                      <li>
+                        <strong className="">
+                          Log In to Your Sanity.io Account
+                        </strong>
+                        <p className="mt-2">
+                          After signing up, log in to your Sanity.io account
+                          using your credentials.
+                        </p>
+                      </li>
+
+                      <li>
+                        <strong className="">Create a New Project</strong>
+                        <p className="mt-2">
+                          Once logged in, click on the &#34;New Project&#34;
+                          button to initiate the project creation process.
+                        </p>
+                      </li>
+
+                      <li>
+                        <strong className="">Configure Your Project</strong>
+                        <p className="mt-2">
+                          Choose a project name, billing plan, and any
+                          additional options as needed. Confirm your selections.
+                        </p>
+                      </li>
+
+                      <li>
+                        <strong className="">Project Setup</strong>
+                        <p className="mt-2">
+                          Select a project template or start with a blank
+                          project based on your requirements.
+                        </p>
+                      </li>
+
+                      <li>
+                        <strong className="">Wait for Project Creation</strong>
+                        <p className="mt-2">
+                          Sanity.io will create your project. This may take a
+                          few moments, so please be patient.
+                        </p>
+                      </li>
+
+                      <li>
+                        <strong className="">Access the Project ID</strong>
+                        <p className="mt-2">
+                          Upon project creation, you&#39;ll find your unique
+                          project ID in the project dashboard or settings.
+                          It&#39;s typically a long string of characters.
+                        </p>
+                      </li>
+                      <li>
+                        <strong>
+                          Add the Project ID to Your Environment Configuration
+                        </strong>
+                        <p className="mt-2">
+                          Copy and paste your project ID into the{' '}
+                          <code className="bg-gray-200 p-1">.env</code> file.
+                        </p>
+                      </li>
+                    </ol>
+
+                    <p className="font-semiborder-l-primary mt-8 bg-green-500 p-4 text-center text-white">
+                      Congratulations! You&#39;ve successfully generated a
+                      Sanity Studio Project ID.
+                    </p>
+
+                    <p className="mt-4">
+                      For any updates or changes to the process, please refer to
+                      the{' '}
+                      <a
+                        href="https://www.sanity.io/docs"
+                        target="_blank"
+                        className="underline"
+                      >
+                        Sanity.io documentation
+                      </a>
+                      .
+                    </p>
+                  </div>
+                </section>
+              </details>
 
               <li>
                 <strong>Channel Creation:</strong>
@@ -282,115 +398,7 @@ const generateStory = async () => {
             </ol>
           </div>
         </section>
-        <section className="bg-white px-8 py-20 text-black">
-          <div className="mx-auto max-w-2xl">
-            <h2>Step-by-Step Guide: Generating a Sanity Studio Project ID</h2>
-            <div>
-              <p>
-                <strong>Disclaimer!</strong> Okay, hold your horses. In order to
-                access to Sanity studio, you need to generate a project ID(we
-                need this for our .env file). Follow the steps below to generate
-                a project ID, it will create a new repository for you, but you
-                can discard it after you have generated the project ID.
-              </p>
-            </div>
-            <ol className="mt-4 list-decimal">
-              <li>
-                <strong>Sign Up for Sanity.io</strong>
-                <p className="mt-2">
-                  Visit the{' '}
-                  <a
-                    href="https://www.sanity.io/"
-                    target="_blank"
-                    className="underline"
-                  >
-                    Sanity.io website
-                  </a>
-                  .
-                </p>
-                <p className="mt-2">
-                  Click on &#34;Get Started&#34; to create your account. Provide
-                  your name, email, and a secure password.
-                </p>
-              </li>
 
-              <li>
-                <strong className="">Log In to Your Sanity.io Account</strong>
-                <p className="mt-2">
-                  After signing up, log in to your Sanity.io account using your
-                  credentials.
-                </p>
-              </li>
-
-              <li>
-                <strong className="">Create a New Project</strong>
-                <p className="mt-2">
-                  Once logged in, click on the &#34;New Project&#34; button to
-                  initiate the project creation process.
-                </p>
-              </li>
-
-              <li>
-                <strong className="">Configure Your Project</strong>
-                <p className="mt-2">
-                  Choose a project name, billing plan, and any additional
-                  options as needed. Confirm your selections.
-                </p>
-              </li>
-
-              <li>
-                <strong className="">Project Setup</strong>
-                <p className="mt-2">
-                  Select a project template or start with a blank project based
-                  on your requirements.
-                </p>
-              </li>
-
-              <li>
-                <strong className="">Wait for Project Creation</strong>
-                <p className="mt-2">
-                  Sanity.io will create your project. This may take a few
-                  moments, so please be patient.
-                </p>
-              </li>
-
-              <li>
-                <strong className="">Access the Project ID</strong>
-                <p className="mt-2">
-                  Upon project creation, you&#39;ll find your unique project ID
-                  in the project dashboard or settings. It&#39;s typically a
-                  long string of characters.
-                </p>
-              </li>
-              <li>
-                <strong>
-                  Add the Project ID to Your Environment Configuration
-                </strong>
-                <p className="mt-2">
-                  Copy and paste your project ID into the{' '}
-                  <code className="bg-gray-200 p-1">.env</code> file.
-                </p>
-              </li>
-            </ol>
-
-            <p className="font-semiborder-l-primary mt-8 bg-green-500 p-4 text-center text-white">
-              Congratulations! You&#39;ve successfully generated a Sanity Studio
-              Project ID.
-            </p>
-
-            <p className="mt-4">
-              For any updates or changes to the process, please refer to the{' '}
-              <a
-                href="https://www.sanity.io/docs"
-                target="_blank"
-                className="underline"
-              >
-                Sanity.io documentation
-              </a>
-              .
-            </p>
-          </div>
-        </section>
         <section className="px-8 py-20">
           <div className="mx-auto max-w-2xl">
             <h2 className="text-purple-500 lg:text-7xl">
@@ -438,7 +446,7 @@ const generateStory = async () => {
               </ol>
               <div className="pt-4">
                 <p>
-                  Select one of the fairytales and take note of the OpenAI text
+                  Create a new fairytale and take note of the OpenAI text
                   generator input field, which you can use for testing.
                   Don&#39;t forget to publish any changes made in the Sanity
                   Studio – the publish button can be found at the bottom of the
@@ -474,7 +482,12 @@ const generateStory = async () => {
               <li>
                 <p>
                   On the frontend page, display the image, the generated text,
-                  and the title.
+                  and the title. You might have to take a closer look at the{' '}
+                  <code className="bg-gray-200 p-0.5 text-black">
+                    getFairytale(params.slug)
+                  </code>{' '}
+                  file to see how the GROQ query is structured, it might be
+                  missing something important.
                 </p>
               </li>
               <li>
@@ -508,14 +521,8 @@ const generateStory = async () => {
             . The image(s) should reflect the story you have generated.
             <div className="pt-6">
               <p>
-                <strong>Hint:</strong> You can use the same function as in Task
-                1
-              </p>
-            </div>
-            <div className="pt-6">
-              <p>
-                <strong>Bonus:</strong> Create a new Sanity Component and
-                generate the image there.
+                <strong>Hint:</strong> You can copy and tweak the same function
+                that you used in task 1.
               </p>
             </div>
           </div>
@@ -524,12 +531,11 @@ const generateStory = async () => {
         <section className="bg-white px-8 py-20 text-black">
           <div className="mx-auto max-w-2xl">
             <h3>Task 4</h3>
-            <div>
+            <div className="pb-2">
               <p>
-                Absolutely, crafting effective prompts for the OpenAI API can
-                indeed make a significant difference in the quality and
-                relevance of the generated content. Here&apos;s a general
-                approach to consider:
+                Crafting effective prompts for the OpenAI API can make a
+                significant difference in the quality and relevance of the
+                generated content. Here&apos;s a general approach to consider:
               </p>
             </div>
             <ol className="list-decimal">
@@ -582,6 +588,18 @@ const generateStory = async () => {
             </ol>
           </div>
         </section>
+        <section className="bg-purple-500 px-8 py-20">
+          <div className="mx-auto max-w-2xl">
+            <h3>Bonus:</h3>
+            <ul className="pt-6">
+              <li>
+                <p>
+                  Create a new Sanity Component and generate the image there.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
         <section className="px-8 py-20">
           <div className="mx-auto max-w-2xl">
             <h3>Task 5 - Presentations</h3>
@@ -589,13 +607,12 @@ const generateStory = async () => {
               <p>
                 Each team will present their work and results in a 5-minute
                 presentation, with the flexibility to use their preferred
-                format. After each presentation, there will be a brief Q&A
-                session for further discussion and questions.
+                format.
               </p>
             </div>
           </div>
         </section>
-        <section className="px-4 py-20">
+        <section className="bg-white px-4 py-20">
           <div className="mx-auto flex max-w-2xl flex-col gap-8">
             <h3>Example code</h3>
             <pre

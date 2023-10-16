@@ -65,7 +65,7 @@ const Links = () => {
       <main className="h-screen w-full bg-stone-100 p-8">
         <section className="grid grid-cols-12 gap-8">
           {linkElements.map(({ label, href, description, tags }) => (
-            <Link
+            <a
               key={href}
               href={href}
               target="_blank"
@@ -86,7 +86,7 @@ const Links = () => {
                   </li>
                 ))}
               </ul>
-            </Link>
+            </a>
           ))}
         </section>
       </main>
