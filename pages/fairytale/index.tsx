@@ -16,7 +16,7 @@ const StoriesPage = ({ fairytales }: PageProps) => {
       <main className="min-h-screen p-4">
         <section className="">
           <h1 className="bg-gradient-to-r from-pink-300 to-purple-600 bg-clip-text py-10 text-center font-extrabold text-transparent sm:text-7xl md:text-7xl lg:text-8xl xl:text-8xl">
-            Eventyr
+            Eventyr lista
           </h1>
           <div className="py-8 text-center">
             <p>
