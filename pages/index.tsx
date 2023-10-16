@@ -32,6 +32,24 @@ const generateStory = async () => {
   }
 }
 `
+
+  const code3 = `
+// JavaScript code
+const response = await fetch('/api/openai-image', {
+  method: 'POST',
+  headers: {
+      'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ prompt: imagePrompt }),
+}).then((res) => res.json())
+
+if (response.text) {
+  setStoryImage(response.text)
+} else {
+  console.log('error')
+}
+`
+
   return (
     <>
       <Head>
@@ -656,6 +674,13 @@ const generateStory = async () => {
                 title="Code snippet"
               >
                 <code>{code2}</code>
+              </pre>
+              <p>Example 3</p>
+              <pre
+                className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black"
+                title="Code snippet"
+              >
+                <code>{code3}</code>
               </pre>
             </details>
           </div>

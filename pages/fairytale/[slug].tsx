@@ -27,7 +27,7 @@ const FairtalePage = ({ fairytale }: PageProps) => {
     // Set the storyImage state to the text property of the response object
     // If the response object does not have a text property, log an error to the console
 
-    const imagePrompt = `I am a placeholder prompt, I should be replaced with something more interesting`
+    const prompt = `I am a placeholder prompt, I should be replaced with something more interesting`
   }
 
   const handleGenerateImage = async () => {
