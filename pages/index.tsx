@@ -548,6 +548,17 @@ if (response.text) {
               generateNewStoryImage
             </code>
             . The image(s) should reflect the story you have generated.
+            <div>
+              <small>
+                Example:{' '}
+                <div>
+                  <code className="bg-gray-200 p-1 text-black">
+                    `An image with fairytale style, with the following story:
+                    *insert generatedText*.`
+                  </code>
+                </div>
+              </small>
+            </div>
             <div className="pt-6">
               <p>
                 <strong>Hint:</strong> You can copy and tweak the same function
