@@ -19,7 +19,6 @@ export default function Page() {
   } else {
       console.log('error')
   }
-  setIsLoading(false)
 `
 
   const code2 = `
