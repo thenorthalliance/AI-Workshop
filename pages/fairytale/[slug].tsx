@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { getAllFairytaleSlugs, getFairytale } from 'lib/sanity.client'
+import { urlForImage } from 'lib/sanity.image'
 import { iFairytale } from 'lib/sanity.queries'
 import { GetStaticProps } from 'next'
 import Image from 'next/image'
@@ -14,6 +15,7 @@ interface Query {
 }
 
 const FairtalePage = ({ fairytale }: PageProps) => {
+  const { generateText, title, coverImage } = fairytale
   const [storyImage, setStoryImage] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
@@ -29,7 +31,7 @@ const FairtalePage = ({ fairytale }: PageProps) => {
     // The API will return a text string that you can use to set the storyImage state.
     // The API is not perfect, so you might have to try a few times to get a good result.
 
-    const imagePrompt = 'placeholder'
+    const imagePrompt = `Make a cute image with a title of: ${title}, and a description of: ${generateText}`
 
     try {
       const response = await fetch('/api/openai-image', {
@@ -60,18 +62,30 @@ const FairtalePage = ({ fairytale }: PageProps) => {
 
   return (
     <>
-      <main className="pb-10">
-        <button
-          className="m-5 rounded-md bg-slate-500 px-2"
-          onClick={handleGenerateImage}
-        >
-          Generate image
-        </button>
+      <main className="p-4">
+        <h1 className="capitalize ">{title}</h1>
+        {coverImage && (
+          <Image
+            src={urlForImage(coverImage).url()}
+            alt=""
+            width={256}
+            height={256}
+          />
+        )}
+        <h2>Generated Content</h2>
+        <div className="py-4">
+          <button
+            className="rounded-md bg-purple-500 px-4 py-3 text-white"
+            onClick={handleGenerateImage}
+          >
+            Generate image
+          </button>
+        </div>
         {isLoading && <p>Loading...</p>}
-
         {storyImage && (
           <Image src={storyImage} alt="" width={256} height={256} />
         )}
+        {generateText && <p>{generateText}</p>}
       </main>
     </>
   )

@@ -36,7 +36,7 @@ export async function getFairytale(slug: string) {
 
   // We are currently fetching, _id, title, slug, coverImage, story, but you can fetch whatever you want from sanity. Let's say you had a value called `author` you could fetch that by adding it to the query like so: `author`
   const results = await client.fetch(
-    `*[_type == "fairytale" && slug.current == $slug]{ _id, title, 'slug': slug.current, coverImage, story}[0]`,
+    `*[_type == "fairytale" && slug.current == $slug]{ _id, title, 'slug': slug.current, coverImage, story, generateText }[0]`,
     {
       slug,
     }
