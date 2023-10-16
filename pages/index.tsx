@@ -1,6 +1,7 @@
 import NoaIgnite from 'lib/icons/NoaIgnite'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
 import { FaIcicles } from 'react-icons/fa'
 
 export default function Page() {
@@ -49,6 +50,29 @@ if (response.text) {
   console.log('error')
 }
 `
+  const [cheat1Visible, setCheat1Visible] = useState(false)
+  const [cheat2Visible, setCheat2Visible] = useState(false)
+  const [cheat3Visible, setCheat3Visible] = useState(false)
+  const cheatCode1 = process.env.NEXT_PUBLIC_CHEAT_CODE_1
+  const cheatCode2 = process.env.NEXT_PUBLIC_CHEAT_CODE_2
+  const cheatCode3 = process.env.NEXT_PUBLIC_CHEAT_CODE_3
+
+  function checkCheatCode(e) {
+    e.preventDefault()
+    const input1 = document.getElementById('cheatInput1') as HTMLInputElement
+    if (input1?.value === cheatCode1) {
+      setCheat1Visible(true)
+    }
+    const input2 = document.getElementById('cheatInput2') as HTMLInputElement
+    if (input2?.value === cheatCode2) {
+      setCheat2Visible(true)
+    }
+    const input3 = document.getElementById('cheatInput3') as HTMLInputElement
+    if (input3?.value === cheatCode3) {
+      setCheat3Visible(true)
+    }
+  }
+
 
   return (
     <>
@@ -56,14 +80,14 @@ if (response.text) {
         <title>AI Workshop</title>
         <meta name="description" content="AI Workshop" />
       </Head>
-      <main className="overflow-x-clip bg-black/80 leading-relaxed text-white">
+      <main className="leading-relaxed text-white overflow-x-clip bg-black/80">
         <section className="flex min-h-[764px] flex-col items-center justify-center px-4">
           <div className="flex flex-col items-center gap-2 p-8 ring ring-white">
             <h1>AI WORKSHOP</h1>
             <h2>Trondheim</h2>
             <h3>16.10.23</h3>
           </div>
-          <div className="flex flex-col items-center justify-center gap-2 fill-white pt-8">
+          <div className="flex flex-col items-center justify-center gap-2 pt-8 fill-white">
             <p>Made by</p>
             <a
               href="https://www.noaignite.no/"
@@ -135,8 +159,8 @@ if (response.text) {
             </a>
           </section>
         </section>
-        <section className="bg-purple-500/90 px-8 py-20">
-          <div className="mx-auto max-w-2xl">
+        <section className="px-8 py-20 bg-purple-500/90">
+          <div className="max-w-2xl mx-auto">
             <div className="flex items-center gap-2">
               <h2>ICEBREAKER:</h2>
               <FaIcicles className="text-2xl" />
@@ -147,7 +171,7 @@ if (response.text) {
               Each team member should introduce themselves to the group. Share
               your:
             </p>
-            <ul className="list-inside list-disc pb-4">
+            <ul className="pb-4 list-disc list-inside">
               <li>Name</li>
               <li>School year</li>
               <li>Favorite Food</li>
@@ -187,7 +211,7 @@ if (response.text) {
               <p>
                 After successfully completing the challenge, each team must:
               </p>
-              <ul className="list-inside list-disc ">
+              <ul className="list-disc list-inside ">
                 <li>Upload an image to Sanity.</li>
                 <li>
                   Generate images with AI, which will be integrated into the
@@ -199,13 +223,13 @@ if (response.text) {
             </div>
           </div>
         </section>
-        <section className="bg-white px-8 py-20 text-black">
-          <div className="mx-auto max-w-2xl">
+        <section className="px-8 py-20 text-black bg-white">
+          <div className="max-w-2xl mx-auto">
             <h2>Getting started</h2>
             <ol className="list-decimal">
               <li>
                 <strong>Repository Setup:</strong>
-                <ul className="list-inside list-disc">
+                <ul className="list-disc list-inside">
                   <li>
                     Designate one team member to fork the repository to their
                     GitHub account.
@@ -219,7 +243,7 @@ if (response.text) {
 
               <li>
                 <strong>Clone Repository:</strong>
-                <ul className="list-inside list-disc">
+                <ul className="list-disc list-inside">
                   <li>
                     Each team member clones the repository from the initial
                     person&#39;s GitHub account to their local machine.
@@ -239,12 +263,12 @@ if (response.text) {
                   </li>
                 </ul>
               </li>
-              <details className="my-4 bg-purple-100 p-4 ring ring-purple-500">
+              <details className="p-4 my-4 bg-purple-100 ring ring-purple-500">
                 <summary>
                   <strong>How to generate a Sanity Studio Project ID</strong>
                 </summary>
                 <section className="p-4 text-black">
-                  <div className="mx-auto max-w-2xl">
+                  <div className="max-w-2xl mx-auto">
                     <div>
                       <p>
                         <strong>Disclaimer!</strong> Okay, hold your horses. In
@@ -331,12 +355,12 @@ if (response.text) {
                         </strong>
                         <p className="mt-2">
                           Copy and paste your project ID into the{' '}
-                          <code className="bg-gray-200 p-1">.env</code> file.
+                          <code className="p-1 bg-gray-200">.env</code> file.
                         </p>
                       </li>
                     </ol>
 
-                    <p className="font-semiborder-l-primary mt-8 bg-green-500 p-4 text-center text-white">
+                    <p className="p-4 mt-8 text-center text-white bg-green-500 font-semiborder-l-primary">
                       Congratulations! You&#39;ve successfully generated a
                       Sanity Studio Project ID.
                     </p>
@@ -359,7 +383,7 @@ if (response.text) {
 
               <li>
                 <strong>Channel Creation:</strong>
-                <ul className="list-inside list-disc">
+                <ul className="list-disc list-inside">
                   <li>
                     Set up communication channels or groups within your chosen
                     communication platform (e.g., Discord channels) to
@@ -370,12 +394,12 @@ if (response.text) {
 
               <li>
                 <strong>Dependency Installation:</strong>
-                <ul className="list-inside list-disc">
+                <ul className="list-disc list-inside">
                   <li>
                     Open a terminal inside the root folder of the project.
                   </li>
                   <li>
-                    Run <code className="bg-gray-200 p-1">npm install</code> to
+                    Run <code className="p-1 bg-gray-200">npm install</code> to
                     install project dependencies.
                   </li>
                 </ul>
@@ -383,10 +407,10 @@ if (response.text) {
 
               <li>
                 <strong>Start Development Server:</strong>
-                <ul className="list-inside list-disc">
+                <ul className="list-disc list-inside">
                   <li>
                     After the installation is complete, run{' '}
-                    <code className="bg-gray-200 p-1">npm run dev</code> to
+                    <code className="p-1 bg-gray-200">npm run dev</code> to
                     start the development server.
                   </li>
                 </ul>
@@ -394,13 +418,13 @@ if (response.text) {
 
               <li>
                 <strong>Testing and Verification:</strong>
-                <ul className="list-inside list-disc">
+                <ul className="list-disc list-inside">
                   <li>
                     Open your web browser and navigate to{' '}
                     <a
                       href="http://localhost:3000/studio"
                       target="_blank"
-                      className="bg-gray-200 p-1"
+                      className="p-1 bg-gray-200"
                     >
                       http://localhost:3000/studio
                     </a>
@@ -413,7 +437,7 @@ if (response.text) {
                       sanity management page
                     </a>
                     , select your project, navigate to the API tab. Add{' '}
-                    <code className="bg-gray-200 p-1">
+                    <code className="p-1 bg-gray-200">
                       http://localhost:3000
                     </code>{' '}
                     to the CORS Origins list.
@@ -429,7 +453,7 @@ if (response.text) {
         </section>
 
         <section className="px-8 py-20">
-          <div className="mx-auto max-w-2xl">
+          <div className="max-w-2xl mx-auto">
             <h2 className="text-purple-500 lg:text-7xl">
               <strong>The Challange</strong>
             </h2>
@@ -494,8 +518,8 @@ if (response.text) {
           </div>
         </section>
 
-        <section className="bg-white px-8 py-20 text-black">
-          <div className="mx-auto max-w-2xl">
+        <section className="px-8 py-20 text-black bg-white">
+          <div className="max-w-2xl mx-auto">
             <h3>Task 2</h3>
             <div className="pb-2">
               <p>
@@ -533,7 +557,7 @@ if (response.text) {
           </div>
         </section>
         <section className="px-8 py-20">
-          <div className="mx-auto max-w-2xl">
+          <div className="max-w-2xl mx-auto">
             <h3>Task 3</h3>
             <div className="pb-2">
               <p>
@@ -544,7 +568,7 @@ if (response.text) {
             </div>
             Replace the image prompt text with your own custom prompt in the
             function{' '}
-            <code className="overflow-x-scroll bg-gray-200 p-1 text-black">
+            <code className="p-1 overflow-x-scroll text-black bg-gray-200">
               generateNewStoryImage
             </code>
             . The image(s) should reflect the story you have generated.
@@ -552,7 +576,7 @@ if (response.text) {
               <small>
                 Example:{' '}
                 <div>
-                  <code className="bg-gray-200 p-1 text-black">
+                  <code className="p-1 text-black bg-gray-200">
                     `An image with fairytale style, with the following story:
                     *insert generatedText*.`
                   </code>
@@ -568,8 +592,8 @@ if (response.text) {
           </div>
         </section>
 
-        <section className="bg-white px-8 py-20 text-black">
-          <div className="mx-auto max-w-2xl">
+        <section className="px-8 py-20 text-black bg-white">
+          <div className="max-w-2xl mx-auto">
             <h3>Task 4</h3>
             <div className="pb-2">
               <p>
@@ -628,10 +652,10 @@ if (response.text) {
             </ol>
           </div>
         </section>
-        <section className="bg-purple-500 px-8 py-20">
-          <div className="mx-auto max-w-2xl">
+        <section className="px-8 py-20 bg-purple-500">
+          <div className="max-w-2xl mx-auto">
             <h3>Bonus:</h3>
-            <ul className="list-disc pt-6">
+            <ul className="pt-6 list-disc">
               <li>
                 <p>
                   Create a new Sanity Component and generate the image in the
@@ -641,10 +665,10 @@ if (response.text) {
               <li>
                 <p>
                   Use the{' '}
-                  <code className="bg-gray-200 p-1 text-black">
+                  <code className="p-1 text-black bg-gray-200">
                     &#39;/api/openai-gpt&#39;
                   </code>{' '}
-                  {}
+                  { }
                   endpoint, instead of the one you used in task 1, to generate a
                   new story. The endpoint requires a different input format, see
                   the code for more details.
@@ -654,7 +678,7 @@ if (response.text) {
           </div>
         </section>
         <section className="px-8 py-20">
-          <div className="mx-auto max-w-2xl">
+          <div className="max-w-2xl mx-auto">
             <h3>Task 5 - Presentations</h3>
             <div>
               <p>
@@ -666,33 +690,67 @@ if (response.text) {
           </div>
         </section>
         <section className="px-4 py-20 ">
-          <div className="mx-auto flex max-w-2xl flex-col gap-8">
+          <div className="flex flex-col max-w-2xl gap-8 mx-auto">
             <h3>Example code</h3>
-            <details className="bg-purple-500 p-4 ring ring-purple-500">
+
+            <details className="p-4 bg-purple-500 ring ring-purple-500">
               <summary>
                 <strong>Show me code!</strong>
               </summary>
-              <p>Example 1</p>
-              <pre
-                className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black "
-                title="Code snippet"
-              >
-                <code>{code}</code>
-              </pre>
-              <p>Example 2</p>
-              <pre
-                className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black"
-                title="Code snippet"
-              >
-                <code>{code2}</code>
-              </pre>
-              <p>Example 3</p>
-              <pre
-                className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black"
-                title="Code snippet"
-              >
-                <code>{code3}</code>
-              </pre>
+              <form onSubmit={checkCheatCode}>
+                <label htmlFor="cheatInput">Cheat code</label>
+                <div>
+                  <input id="cheatInput1" type="text" placeholder='Type code to unlock hint' className='p-1 text-black bg-white border border-white invalid:bg-red-200 valid:bg-green-200' pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_1} />
+                  <button className='p-1 border border-white'>Check</button>
+                </div>
+              </form>
+              {cheat1Visible &&
+                <>
+                  <p>Example 1</p>
+                  <pre
+                    className="p-2 overflow-x-scroll text-black whitespace-pre bg-gray-200 "
+                    title="Code snippet"
+                  >
+                    <code>{code}</code>
+                  </pre>
+                </>
+              }
+              <form onSubmit={checkCheatCode}>
+                <label htmlFor="cheatInput">Cheat code</label>
+                <div>
+                  <input id="cheatInput2" type="text" placeholder='Type code to unlock hint' className='p-1 text-black bg-white border border-white invalid:bg-red-200 valid:bg-green-200' pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_2} />
+                  <button className='p-1 border border-white'>Check</button>
+                </div>
+              </form>
+              {cheat2Visible &&
+                <>
+                  <p>Example 2</p>
+                  <pre
+                    className="p-2 overflow-x-scroll text-black whitespace-pre bg-gray-200"
+                    title="Code snippet"
+                  >
+                    <code>{code2}</code>
+                  </pre>
+                </>
+              }
+              <form onSubmit={checkCheatCode}>
+                <label htmlFor="cheatInput3">Cheat code</label>
+                <div>
+                  <input id="cheatInput3" type="text" placeholder='Type code to unlock hint' className='p-1 text-black bg-white border border-white invalid:bg-red-200 valid:bg-green-200' pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_3} />
+                  <button className='p-1 border border-white'>Check</button>
+                </div>
+              </form>
+              {cheat3Visible &&
+                <>
+                  <p>Example 3</p>
+                  <pre
+                    className="p-2 overflow-x-scroll text-black whitespace-pre bg-gray-200"
+                    title="Code snippet"
+                  >
+                    <code>{code3}</code>
+                  </pre>
+                </>
+              }
             </details>
           </div>
         </section>
