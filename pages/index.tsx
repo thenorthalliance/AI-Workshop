@@ -602,11 +602,23 @@ const generateStory = async () => {
         <section className="bg-purple-500 px-8 py-20">
           <div className="mx-auto max-w-2xl">
             <h3>Bonus:</h3>
-            <ul className="pt-6">
+            <ul className="list-disc pt-6">
               <li>
                 <p>
                   Create a new Sanity Component and generate the image in the
                   studio.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Use the{' '}
+                  <code className="bg-gray-200 p-1 text-black">
+                    &#39;/api/openai-gpt&#39;
+                  </code>{' '}
+                  {}
+                  endpoint, instead of the one you used in task 1, to generate a
+                  new story. The endpoint requires a different input format, see
+                  the code for more details.
                 </p>
               </li>
             </ul>
@@ -624,21 +636,28 @@ const generateStory = async () => {
             </div>
           </div>
         </section>
-        <section className="bg-white px-4 py-20">
+        <section className="px-4 py-20 ">
           <div className="mx-auto flex max-w-2xl flex-col gap-8">
             <h3>Example code</h3>
-            <pre
-              className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black "
-              title="Code snippet"
-            >
-              <code>{code}</code>
-            </pre>
-            <pre
-              className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black"
-              title="Code snippet"
-            >
-              <code>{code2}</code>
-            </pre>
+            <details className="bg-purple-500 p-4 ring ring-purple-500">
+              <summary>
+                <strong>Show me code!</strong>
+              </summary>
+              <p>Example 1</p>
+              <pre
+                className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black "
+                title="Code snippet"
+              >
+                <code>{code}</code>
+              </pre>
+              <p>Example 2</p>
+              <pre
+                className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black"
+                title="Code snippet"
+              >
+                <code>{code2}</code>
+              </pre>
+            </details>
           </div>
         </section>
       </main>
