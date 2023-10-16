@@ -73,21 +73,20 @@ if (response.text) {
     }
   }
 
-
   return (
     <>
       <Head>
         <title>AI Workshop</title>
         <meta name="description" content="AI Workshop" />
       </Head>
-      <main className="leading-relaxed text-white overflow-x-clip bg-black/80">
+      <main className="overflow-x-clip bg-black/80 leading-relaxed text-white">
         <section className="flex min-h-[764px] flex-col items-center justify-center px-4">
           <div className="flex flex-col items-center gap-2 p-8 ring ring-white">
             <h1>AI WORKSHOP</h1>
             <h2>Trondheim</h2>
             <h3>16.10.23</h3>
           </div>
-          <div className="flex flex-col items-center justify-center gap-2 pt-8 fill-white">
+          <div className="flex flex-col items-center justify-center gap-2 fill-white pt-8">
             <p>Made by</p>
             <a
               href="https://www.noaignite.no/"
@@ -134,7 +133,7 @@ if (response.text) {
               className="underline"
               target="_blank"
             >
-              Github Repository - Clone me!
+              Github Repository - Template me!
             </a>
             <a
               href="https://discord.gg/Quf3vNej4"
@@ -159,8 +158,8 @@ if (response.text) {
             </a>
           </section>
         </section>
-        <section className="px-8 py-20 bg-purple-500/90">
-          <div className="max-w-2xl mx-auto">
+        <section className="bg-purple-500/90 px-8 py-20">
+          <div className="mx-auto max-w-2xl">
             <div className="flex items-center gap-2">
               <h2>ICEBREAKER:</h2>
               <FaIcicles className="text-2xl" />
@@ -171,7 +170,7 @@ if (response.text) {
               Each team member should introduce themselves to the group. Share
               your:
             </p>
-            <ul className="pb-4 list-disc list-inside">
+            <ul className="list-inside list-disc pb-4">
               <li>Name</li>
               <li>School year</li>
               <li>Favorite Food</li>
@@ -211,7 +210,7 @@ if (response.text) {
               <p>
                 After successfully completing the challenge, each team must:
               </p>
-              <ul className="list-disc list-inside ">
+              <ul className="list-inside list-disc ">
                 <li>Upload an image to Sanity.</li>
                 <li>
                   Generate images with AI, which will be integrated into the
@@ -223,13 +222,13 @@ if (response.text) {
             </div>
           </div>
         </section>
-        <section className="px-8 py-20 text-black bg-white">
-          <div className="max-w-2xl mx-auto">
+        <section className="bg-white px-8 py-20 text-black">
+          <div className="mx-auto max-w-2xl">
             <h2>Getting started</h2>
             <ol className="list-decimal">
               <li>
                 <strong>Repository Setup:</strong>
-                <ul className="list-disc list-inside">
+                <ul className="list-inside list-disc">
                   <li>
                     Designate one team member to fork the repository to their
                     GitHub account.
@@ -243,7 +242,7 @@ if (response.text) {
 
               <li>
                 <strong>Clone Repository:</strong>
-                <ul className="list-disc list-inside">
+                <ul className="list-inside list-disc">
                   <li>
                     Each team member clones the repository from the initial
                     person&#39;s GitHub account to their local machine.
@@ -263,12 +262,12 @@ if (response.text) {
                   </li>
                 </ul>
               </li>
-              <details className="p-4 my-4 bg-purple-100 ring ring-purple-500">
+              <details className="my-4 bg-purple-100 p-4 ring ring-purple-500">
                 <summary>
                   <strong>How to generate a Sanity Studio Project ID</strong>
                 </summary>
                 <section className="p-4 text-black">
-                  <div className="max-w-2xl mx-auto">
+                  <div className="mx-auto max-w-2xl">
                     <div>
                       <p>
                         <strong>Disclaimer!</strong> Okay, hold your horses. In
@@ -355,12 +354,12 @@ if (response.text) {
                         </strong>
                         <p className="mt-2">
                           Copy and paste your project ID into the{' '}
-                          <code className="p-1 bg-gray-200">.env</code> file.
+                          <code className="bg-gray-200 p-1">.env</code> file.
                         </p>
                       </li>
                     </ol>
 
-                    <p className="p-4 mt-8 text-center text-white bg-green-500 font-semiborder-l-primary">
+                    <p className="font-semiborder-l-primary mt-8 bg-green-500 p-4 text-center text-white">
                       Congratulations! You&#39;ve successfully generated a
                       Sanity Studio Project ID.
                     </p>
@@ -383,7 +382,7 @@ if (response.text) {
 
               <li>
                 <strong>Channel Creation:</strong>
-                <ul className="list-disc list-inside">
+                <ul className="list-inside list-disc">
                   <li>
                     Set up communication channels or groups within your chosen
                     communication platform (e.g., Discord channels) to
@@ -394,12 +393,12 @@ if (response.text) {
 
               <li>
                 <strong>Dependency Installation:</strong>
-                <ul className="list-disc list-inside">
+                <ul className="list-inside list-disc">
                   <li>
                     Open a terminal inside the root folder of the project.
                   </li>
                   <li>
-                    Run <code className="p-1 bg-gray-200">npm install</code> to
+                    Run <code className="bg-gray-200 p-1">npm install</code> to
                     install project dependencies.
                   </li>
                 </ul>
@@ -407,10 +406,10 @@ if (response.text) {
 
               <li>
                 <strong>Start Development Server:</strong>
-                <ul className="list-disc list-inside">
+                <ul className="list-inside list-disc">
                   <li>
                     After the installation is complete, run{' '}
-                    <code className="p-1 bg-gray-200">npm run dev</code> to
+                    <code className="bg-gray-200 p-1">npm run dev</code> to
                     start the development server.
                   </li>
                 </ul>
@@ -418,13 +417,13 @@ if (response.text) {
 
               <li>
                 <strong>Testing and Verification:</strong>
-                <ul className="list-disc list-inside">
+                <ul className="list-inside list-disc">
                   <li>
                     Open your web browser and navigate to{' '}
                     <a
                       href="http://localhost:3000/studio"
                       target="_blank"
-                      className="p-1 bg-gray-200"
+                      className="bg-gray-200 p-1"
                     >
                       http://localhost:3000/studio
                     </a>
@@ -437,7 +436,7 @@ if (response.text) {
                       sanity management page
                     </a>
                     , select your project, navigate to the API tab. Add{' '}
-                    <code className="p-1 bg-gray-200">
+                    <code className="bg-gray-200 p-1">
                       http://localhost:3000
                     </code>{' '}
                     to the CORS Origins list.
@@ -453,7 +452,7 @@ if (response.text) {
         </section>
 
         <section className="px-8 py-20">
-          <div className="max-w-2xl mx-auto">
+          <div className="mx-auto max-w-2xl">
             <h2 className="text-purple-500 lg:text-7xl">
               <strong>The Challange</strong>
             </h2>
@@ -518,8 +517,8 @@ if (response.text) {
           </div>
         </section>
 
-        <section className="px-8 py-20 text-black bg-white">
-          <div className="max-w-2xl mx-auto">
+        <section className="bg-white px-8 py-20 text-black">
+          <div className="mx-auto max-w-2xl">
             <h3>Task 2</h3>
             <div className="pb-2">
               <p>
@@ -557,7 +556,7 @@ if (response.text) {
           </div>
         </section>
         <section className="px-8 py-20">
-          <div className="max-w-2xl mx-auto">
+          <div className="mx-auto max-w-2xl">
             <h3>Task 3</h3>
             <div className="pb-2">
               <p>
@@ -568,7 +567,7 @@ if (response.text) {
             </div>
             Replace the image prompt text with your own custom prompt in the
             function{' '}
-            <code className="p-1 overflow-x-scroll text-black bg-gray-200">
+            <code className="overflow-x-scroll bg-gray-200 p-1 text-black">
               generateNewStoryImage
             </code>
             . The image(s) should reflect the story you have generated.
@@ -576,7 +575,7 @@ if (response.text) {
               <small>
                 Example:{' '}
                 <div>
-                  <code className="p-1 text-black bg-gray-200">
+                  <code className="bg-gray-200 p-1 text-black">
                     `An image with fairytale style, with the following story:
                     *insert generatedText*.`
                   </code>
@@ -592,8 +591,8 @@ if (response.text) {
           </div>
         </section>
 
-        <section className="px-8 py-20 text-black bg-white">
-          <div className="max-w-2xl mx-auto">
+        <section className="bg-white px-8 py-20 text-black">
+          <div className="mx-auto max-w-2xl">
             <h3>Task 4</h3>
             <div className="pb-2">
               <p>
@@ -652,10 +651,10 @@ if (response.text) {
             </ol>
           </div>
         </section>
-        <section className="px-8 py-20 bg-purple-500">
-          <div className="max-w-2xl mx-auto">
+        <section className="bg-purple-500 px-8 py-20">
+          <div className="mx-auto max-w-2xl">
             <h3>Bonus:</h3>
-            <ul className="pt-6 list-disc">
+            <ul className="list-disc pt-6">
               <li>
                 <p>
                   Create a new Sanity Component and generate the image in the
@@ -665,10 +664,10 @@ if (response.text) {
               <li>
                 <p>
                   Use the{' '}
-                  <code className="p-1 text-black bg-gray-200">
+                  <code className="bg-gray-200 p-1 text-black">
                     &#39;/api/openai-gpt&#39;
                   </code>{' '}
-                  { }
+                  {}
                   endpoint, instead of the one you used in task 1, to generate a
                   new story. The endpoint requires a different input format, see
                   the code for more details.
@@ -678,7 +677,7 @@ if (response.text) {
           </div>
         </section>
         <section className="px-8 py-20">
-          <div className="max-w-2xl mx-auto">
+          <div className="mx-auto max-w-2xl">
             <h3>Task 5 - Presentations</h3>
             <div>
               <p>
@@ -690,67 +689,85 @@ if (response.text) {
           </div>
         </section>
         <section className="px-4 py-20 ">
-          <div className="flex flex-col max-w-2xl gap-8 mx-auto">
+          <div className="mx-auto flex max-w-2xl flex-col gap-8">
             <h3>Example code</h3>
 
-            <details className="p-4 bg-purple-500 ring ring-purple-500">
+            <details className="bg-purple-500 p-4 ring ring-purple-500">
               <summary>
                 <strong>Show me code!</strong>
               </summary>
               <form onSubmit={checkCheatCode}>
                 <label htmlFor="cheatInput">Cheat code</label>
                 <div>
-                  <input id="cheatInput1" type="text" placeholder='Type code to unlock hint' className='p-1 text-black bg-white border border-white invalid:bg-red-200 valid:bg-green-200' pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_1} />
-                  <button className='p-1 border border-white'>Check</button>
+                  <input
+                    id="cheatInput1"
+                    type="text"
+                    placeholder="Type code to unlock hint"
+                    className="border border-white bg-white p-1 text-black valid:bg-green-200 invalid:bg-red-200"
+                    pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_1}
+                  />
+                  <button className="border border-white p-1">Check</button>
                 </div>
               </form>
-              {cheat1Visible &&
+              {cheat1Visible && (
                 <>
                   <p>Example 1</p>
                   <pre
-                    className="p-2 overflow-x-scroll text-black whitespace-pre bg-gray-200 "
+                    className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black "
                     title="Code snippet"
                   >
                     <code>{code}</code>
                   </pre>
                 </>
-              }
+              )}
               <form onSubmit={checkCheatCode}>
                 <label htmlFor="cheatInput">Cheat code</label>
                 <div>
-                  <input id="cheatInput2" type="text" placeholder='Type code to unlock hint' className='p-1 text-black bg-white border border-white invalid:bg-red-200 valid:bg-green-200' pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_2} />
-                  <button className='p-1 border border-white'>Check</button>
+                  <input
+                    id="cheatInput2"
+                    type="text"
+                    placeholder="Type code to unlock hint"
+                    className="border border-white bg-white p-1 text-black valid:bg-green-200 invalid:bg-red-200"
+                    pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_2}
+                  />
+                  <button className="border border-white p-1">Check</button>
                 </div>
               </form>
-              {cheat2Visible &&
+              {cheat2Visible && (
                 <>
                   <p>Example 2</p>
                   <pre
-                    className="p-2 overflow-x-scroll text-black whitespace-pre bg-gray-200"
+                    className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black"
                     title="Code snippet"
                   >
                     <code>{code2}</code>
                   </pre>
                 </>
-              }
+              )}
               <form onSubmit={checkCheatCode}>
                 <label htmlFor="cheatInput3">Cheat code</label>
                 <div>
-                  <input id="cheatInput3" type="text" placeholder='Type code to unlock hint' className='p-1 text-black bg-white border border-white invalid:bg-red-200 valid:bg-green-200' pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_3} />
-                  <button className='p-1 border border-white'>Check</button>
+                  <input
+                    id="cheatInput3"
+                    type="text"
+                    placeholder="Type code to unlock hint"
+                    className="border border-white bg-white p-1 text-black valid:bg-green-200 invalid:bg-red-200"
+                    pattern={process.env.NEXT_PUBLIC_CHEAT_CODE_3}
+                  />
+                  <button className="border border-white p-1">Check</button>
                 </div>
               </form>
-              {cheat3Visible &&
+              {cheat3Visible && (
                 <>
                   <p>Example 3</p>
                   <pre
-                    className="p-2 overflow-x-scroll text-black whitespace-pre bg-gray-200"
+                    className="overflow-x-scroll whitespace-pre bg-gray-200 p-2 text-black"
                     title="Code snippet"
                   >
                     <code>{code3}</code>
                   </pre>
                 </>
-              }
+              )}
             </details>
           </div>
         </section>
