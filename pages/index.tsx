@@ -389,6 +389,18 @@ const generateStory = async () => {
                     .
                   </li>
                   <li>
+                    Here you will get a CORS error, navigate to your sanity
+                    studio management page
+                    <a href="https://www.sanity.io/manage">
+                      sanity management page
+                    </a>
+                    , select your project, navigate to the API tab. Add{' '}
+                    <code className="bg-gray-200 p-1">
+                      http://localhost:3000
+                    </code>{' '}
+                    to the CORS Origins list.
+                  </li>
+                  <li>
                     Click on &quot;Fairytales&quot; to verify that you have
                     three documents containing three Norwegian fairytales.
                   </li>
