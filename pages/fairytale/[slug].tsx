@@ -20,17 +20,14 @@ const FairtalePage = ({ fairytale }: PageProps) => {
   const [storyImage, setStoryImage] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleGenerateStory = async () => {
-    // Add your code here
-  }
-
   const generateNewStoryImage = async () => {
     // Add code here to generate a new story image based on sanity data, be creative!
     // Use values from the fairytale object to generate a prompt, you might have to get creative here.
     // The prompt should be a string that is passed to the openai-image API.
     // The API will return a text string that you can use to set the storyImage state.
     // The API is not perfect, so you might have to try a few times to get a good result.
-    // const imagePrompt = 'I am a placeholder prompt, I should be replaced with something more interesting'
+    //
+    // const imagePrompt = `I am a placeholder prompt, I should be replaced with something more interesting`
   }
 
   const handleGenerateImage = async () => {
@@ -38,22 +35,18 @@ const FairtalePage = ({ fairytale }: PageProps) => {
   }
 
   return (
-    <>
-      <main className="p-10">
-        <h1>{title}</h1>
-        <button
-          className="m-5 rounded-md bg-slate-500 px-2"
-          onClick={handleGenerateImage}
-        >
-          Generate image
-        </button>
-        {isLoading && <p>Loading...</p>}
+    <main className="p-10">
+      <h1>{title}</h1>
+      <button
+        className="m-5 rounded-md bg-slate-500 px-2"
+        onClick={handleGenerateImage}
+      >
+        Generate image
+      </button>
+      {isLoading && <p>Loading...</p>}
 
-        {storyImage && (
-          <Image src={storyImage} alt="" width={256} height={256} />
-        )}
-      </main>
-    </>
+      {storyImage && <Image src={storyImage} alt="" width={256} height={256} />}
+    </main>
   )
 }
 

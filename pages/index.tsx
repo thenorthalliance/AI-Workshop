@@ -605,7 +605,8 @@ const generateStory = async () => {
             <ul className="pt-6">
               <li>
                 <p>
-                  Create a new Sanity Component and generate the image there.
+                  Create a new Sanity Component and generate the image in the
+                  studio.
                 </p>
               </li>
             </ul>
