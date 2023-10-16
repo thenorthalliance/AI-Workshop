@@ -437,7 +437,7 @@ const generateStory = async () => {
                     <code className="bg-gray-200 p-0.5 text-black">
                       const callApi
                     </code>{' '}
-                    unction to fetch data from OpenAI (refer to the code for
+                    function to fetch data from OpenAI (refer to the code for
                     guidance).
                   </p>
                 </li>
@@ -492,7 +492,7 @@ const generateStory = async () => {
             <ol className="list-decimal">
               <li>
                 <p>
-                  On the frontend page, display the image, the generated text,
+                  On the frontend, display a cover image, the generated text,
                   and the title. You might have to take a closer look at the{' '}
                   <code className="bg-gray-200 p-0.5 text-black">
                     getFairytale(params.slug)

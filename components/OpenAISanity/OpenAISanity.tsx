@@ -21,8 +21,8 @@ const OpenAISanity = (props: StringInputProps) => {
      * 1. use Post method
      * 2. the body will contain prompt
      * 3. response will have text value
-     * 4. use setIsLoading to show loading icon
-     * 5. use try catch to handle errors
+     * 4. Use the two function imported from sanity to set the data if response is successful
+     *
      *
      * BONUS
      * 4. Error handling
@@ -31,11 +31,11 @@ const OpenAISanity = (props: StringInputProps) => {
     /**
      * See code example on landing page
      */
+    alert('You need to implement this function')
   }
 
   const generateStory = async () => {
-    // Here you can call the function you just wrote and handle some errors
-    // callApi()
+    // Here you can call the function callApi() you just wrote and handle some errors
   }
 
   return (
